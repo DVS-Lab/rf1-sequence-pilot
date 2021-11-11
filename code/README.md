@@ -1,17 +1,21 @@
-# ISTART-sharedreward: Analysis Code
+# ISTART-data: Analysis Code
 
 ## Overview and disclaimers
-- run_* scripts loop through a list of subjects for a given script; e.g., run_L1stats.sh loops all subjects through the L1stats.sh script.
+- run_* scripts loop through a list of subjects for a given script; e.g., run_fmriprep.sh loops all subjects through the fmriprep.sh script.
 - paths to input/output data should work without error, but check package/software installation
-- see also https://github.com/DVS-Lab/istart-data for scripts that generated data that this reposistory uses
 
-## Scripts and files
-- `L1stats.sh` -- Level 1 analysis on a specific subject and run (could be activation, PPI, or network PPI)
-- `L2stats.sh` -- Level 2 analysis (combine data across runs)
-- `L3stats.sh` -- Level 3 analysis (i.e., group-level analysis)
-- `barweb_dvs2.m` -- helper function for making bargraphs (used by `plotROIdata.m`)
-- `compileZimages.sh` -- compiles subject-level z-stat images (useful for plotting)
-- `extractROI.sh` -- extract stat values (e.g., zstat, cope, etc.) from an ROI in a 4-d image
-- `gen3colfiles.sh` -- generate 3-column files for FSL based on BIDS `*_events.tsv` files
-- `plotROIdata.m` -- plot data from an ROI as a bar graph (uses output of `extractROI.sh`)
-- `newsubs.txt` -- list of subjects for an analysis
+## Scripts used to generate public data
+Some files cannot be shared publicly. And some raw source data are in non-standard format. The scripts below helped us go from the raw source data to the standardized public data:
+- `prepdata.sh` -- runs [heudiconv](https://github.com/nipy/heudiconv) to convert dicoms to BIDS, defaces structural scans with pydeface, and runs [mriqc](https://mriqc.readthedocs.io/en/latest/index.html)
+  - [heuristics.py](https://github.com/DVS-Lab/srndna-data/blob/main/code/heuristics.py) sets the heuristics for heudiconv
+  - [addIntendedFor.py](https://github.com/DVS-Lab/srndna-data/blob/main/code/addIntendedFor.py) adds the "IntendedFor" field for the fmap files
+- Code for stimuli control/presentation and conversion of raw behavioral data to BIDS are in [stimuli](https://github.com/DVS-Lab/srndna-data/tree/main/stimuli)
+
+## Analyses  
+- Analysis scripts are in task-specific repositories
+- e.g., https://github.com/DVS-Lab/srndna-trustgame
+
+
+
+
+[fmriprep]: http://fmriprep.readthedocs.io/en/latest/index.html
