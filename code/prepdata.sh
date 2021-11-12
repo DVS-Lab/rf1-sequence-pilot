@@ -45,7 +45,7 @@ singularity run --cleanenv \
 
 # run Jeff's code to fix field map, but first correct permissions
 chmod -R uga+rw $dsroot/bids/sub-$sub
-python $codedir/addIntendedFor.py
+# python $codedir/addIntendedFor.py
 
 
 #
