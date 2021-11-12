@@ -54,7 +54,7 @@ def infotodict(seqinfo):
             rest_mb3me3_sbref: [],
 
             rest_mb3me3noInt: [],
-            rest_mb6me3noInt_sbref: [],
+            rest_mb3me3noInt_sbref: [],
             }
 
     list_of_ids = [s.series_id for s in seqinfo]
@@ -104,5 +104,5 @@ def infotodict(seqinfo):
             idx = list_of_ids.index(s.series_id)
             info[rest_mb3me3noInt_sbref].append(list_of_ids[idx -1])
 
-            
+
     return info
