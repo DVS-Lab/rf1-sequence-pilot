@@ -35,9 +35,10 @@ def infotodict(seqinfo):
     rest_mb3me3 =       create_key('sub-{subject}/func/sub-{subject}_acq-mb3me3_task-rest_run-{item:d}_bold')
     rest_mb3me3_sbref = create_key('sub-{subject}/func/sub-{subject}_acq-mb3me3_task-rest_run-{item:d}_sbref')
 
+        # mag: [],
+        # phase: [],
+
     info = {t1w: [],
-            mag: [],
-            phase: [],
 
             rest_mb1me1: [],
             rest_mb1me1_sbref: [],
