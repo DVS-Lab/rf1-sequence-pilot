@@ -10,10 +10,13 @@ def infotodict(seqinfo):
     # mag = create_key('sub-{subject}/fmap/sub-{subject}_magnitude')
     # phase = create_key('sub-{subject}/fmap/sub-{subject}_phasediff')
 
+    # missing sbref for the following?
+    # 7-CMRR_MB1_IP2_ME1_TR1850
+    # 12-CMRR_MB1_IP2_ME3_TR1850
 
     #me1
     rest_mb1me1 =       create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb1me1_bold')
-    rest_mb1me1_sbref = create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb1me1_sbref')
+    #rest_mb1me1_sbref = create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb1me1_sbref')
     rest_mb3me1 =       create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb3me1_bold')
     rest_mb3me1_sbref = create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb3me1_sbref')
     rest_mb6me1 =       create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb6me1_bold')
@@ -26,8 +29,8 @@ def infotodict(seqinfo):
     rest_mb3me3_sbref =      create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb3me3_sbref')
     rest_mb6me3 =            create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb6me3_bold')
     rest_mb6me3_sbref =      create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb6me3_sbref')
-    rest_mb3me3noInt =       create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb6me3noInt_bold')
-    rest_mb3me3noInt_sbref = create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb6me3noInt_sbref')
+    rest_mb3me3noInt =       create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb3me3noInt_bold')
+    rest_mb3me3noInt_sbref = create_key('sub-{subject}/func/sub-{subject}_task-rest_acq-mb3me3noInt_sbref')
 
     # note: didn't get sbref for CMRR_MB1_IP2_ME3_TR1850
 
@@ -43,7 +46,7 @@ def infotodict(seqinfo):
     info = {t1w: [],
 
             rest_mb1me1: [],
-            rest_mb1me1_sbref: [],
+            #rest_mb1me1_sbref: [],
             rest_mb3me1: [],
             rest_mb3me1_sbref: [],
             rest_mb6me1: [],
@@ -75,7 +78,7 @@ def infotodict(seqinfo):
         if (s.dim4 >= 100) and ('MB1_IP2_ME1' in s.protocol_name):
             info[rest_mb1me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
-            info[rest_mb1me1_sbref].append(list_of_ids[idx -1])
+            #info[rest_mb1me1_sbref].append(list_of_ids[idx -1])
         elif (s.dim4 >= 100) and ('MB3_IP2_ME1' in s.protocol_name):
             info[rest_mb3me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
