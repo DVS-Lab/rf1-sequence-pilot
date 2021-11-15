@@ -28,16 +28,16 @@ responseKeys=('2','3','z')
 #get subjID
 subjDlg=gui.Dlg(title="Shared Reward Task")
 subjDlg.addField('Enter Subject ID: ')
-subjDlg.addField('Enter Friend Name: ') #1
+#subjDlg.addField('Enter Friend Name: ') #1
 subjDlg.addField('Enter Partner Name: ')#NOTE: PARTNER IS THE CONFEDERATE/STRANGER #2
-subjDlg.addField('Run:', choices=['1', '2'])
+subjDlg.addField('Run:', choices=['1', '2', '3', '4', '5', '6'])
 subjDlg.show()
 
 if gui.OK:
     subj_id=subjDlg.data[0]
-    friend_id=subjDlg.data[1]
-    stranger_id=subjDlg.data[2]
-    run = subjDlg.data[3]
+    #friend_id=subjDlg.data[1]
+    stranger_id=subjDlg.data[1]
+    run = subjDlg.data[2]
 
 else:
     sys.exit()
@@ -45,7 +45,7 @@ else:
 run_data = {
     'Participant ID': subj_id,
     'Date': str(datetime.datetime.now()),
-    'Description': 'SRNDNA Pilot - SharedReward Task'
+    'Description': 'RF1 Sequence Pilot - SharedReward Task'
     }
 
 #window setup
@@ -91,16 +91,28 @@ logging.setDefaultClock(globalClock)
 timer = core.Clock()
 
 #trial handler
-trial_data_1 = [r for r in csv.DictReader(open('params/SR_blocks/sub-' + subj_id + '/sub-'
+trial_data_1 = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
     + subj_id + '_run-01_design.csv','rU'))]
-trial_data_2  = [r for r in csv.DictReader(open('params/SR_blocks/sub-' + subj_id + '/sub-'
+trial_data_2  = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
     + subj_id + '_run-02_design.csv','rU'))]
+trial_data_3 = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
+    + subj_id + '_run-03_design.csv','rU'))]
+trial_data_4  = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
+    + subj_id + '_run-04_design.csv','rU'))]
+trial_data_5 = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
+    + subj_id + '_run-05_design.csv','rU'))]
+trial_data_6  = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
+    + subj_id + '_run-06_design.csv','rU'))]
 
 #trial_data = [r for r in csv.DictReader(open('SharedReward_design.csv','rU'))]
 #trials = data.TrialHandler(trial_data[:], 1, method="sequential") #change to [] for full run
 
 trials_run1 = data.TrialHandler(trial_data_1[:], 1, method="sequential") #change to [] for full run
 trials_run2 = data.TrialHandler(trial_data_2[:], 1, method="sequential") #change to [] for full run
+trials_run3 = data.TrialHandler(trial_data_3[:], 1, method="sequential") #change to [] for full run
+trials_run4 = data.TrialHandler(trial_data_4[:], 1, method="sequential") #change to [] for full run
+trials_run5 = data.TrialHandler(trial_data_5[:], 1, method="sequential") #change to [] for full run
+trials_run6 = data.TrialHandler(trial_data_6[:], 1, method="sequential") #change to [] for full run
 
 #set partner names
 # 3 = friend, 2 = confederate, 1 = computer
