@@ -23,7 +23,7 @@ initial_fixation_dur = 4
 decision_dur=2.5
 outcome_dur=1
 
-responseKeys=('2','3','z')
+responseKeys=('1','6','z')
 
 #get subjID
 subjDlg=gui.Dlg(title="Shared Reward Task")
@@ -205,12 +205,12 @@ def do_run(run, trials):
                     win.close()
                     core.quit()
                 resp_val = int(resp[0])
-                if resp_val==2:
+                if resp_val==1:
                     resp_onset = globalClock.getTime()
                     question.setColor('darkorange')
                     rt = resp_onset - decision_onset
                     #core.wait(decision_dur - rt)
-                if resp_val==3:
+                if resp_val==6:
                     resp_onset = globalClock.getTime()
                     question.setColor('darkorange')
                     rt = resp_onset - decision_onset
@@ -245,32 +245,32 @@ def do_run(run, trials):
             nameStim.draw()
             #win.flip()
 
-            if trial['Feedback'] == '3' and resp_val == 2:
+            if trial['Feedback'] == '3' and resp_val == 1:
                 outcome_txt = int(random.randint(1,4))
                 outcome_moneyTxt= 'h'
                 outcome_color='lime'
                 trials.addData('outcome_val', int(outcome_txt))
-            elif trial['Feedback'] == '3' and resp_val == 3:
+            elif trial['Feedback'] == '3' and resp_val == 6:
                 outcome_txt = int(random.randint(6,9))
                 outcome_moneyTxt= 'h'
                 outcome_color='lime'
                 trials.addData('outcome_val', int(outcome_txt))
-            elif trial['Feedback'] == '2' and resp_val == 2:
+            elif trial['Feedback'] == '2' and resp_val == 1:
                 outcome_txt = int(5)
                 outcome_moneyTxt= 'n'
                 outcome_color='white'
                 trials.addData('outcome_val', int(outcome_txt))
-            elif trial['Feedback'] == '2' and resp_val == 3:
+            elif trial['Feedback'] == '2' and resp_val == 6:
                 outcome_txt = int(5)
                 outcome_moneyTxt= 'n'
                 outcome_color='white'
                 trials.addData('outcome_val', int(outcome_txt))
-            elif trial['Feedback'] == '1' and resp_val == 2:
+            elif trial['Feedback'] == '1' and resp_val == 1:
                 outcome_txt = int(random.randint(6,9))
                 outcome_moneyTxt= 'i'
                 outcome_color='darkred'
                 trials.addData('outcome_val', int(outcome_txt))
-            elif trial['Feedback'] == '1' and resp_val == 3:
+            elif trial['Feedback'] == '1' and resp_val == 6:
                 outcome_txt = int (random.randint(1,4))
                 outcome_moneyTxt= 'i'
                 outcome_color='darkred'
