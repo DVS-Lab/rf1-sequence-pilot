@@ -92,7 +92,7 @@ timer = core.Clock()
 
 #trial handler
 trial_data = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
-    + subj_id + '_run-0' run '_design.csv','rU'))]
+    + subj_id + '_run-0' + run + '_design.csv','rU'))]
 
 
 #trial_data = [r for r in csv.DictReader(open('SharedReward_design.csv','rU'))]
