@@ -105,7 +105,6 @@ trials_run = data.TrialHandler(trial_data[:], 1, method="sequential") #change to
 # change names accordingly here
 
 stim_map = {
-  '3': friend_id,
   '2': stranger_id,
   '1': 'Computer',
   }
