@@ -58,7 +58,7 @@ print("got to check 1")
 fixation = visual.TextStim(win, text="+", height=2)
 
 #waiting for trigger
-ready_screen = visual.TextStim(win, text="Please wait for the block of trials to begin. \n\nRemember to keep your head still!", height=1.5)
+ready_screen = visual.TextStim(win, text="Please wait for the block of trials to begin. \n\nRemember to make your choice when the question mark is on the screen and keep your head still!", height=1.5)
 
 #decision screen
 nameStim = visual.TextStim(win=win,font='Arial',pos=(0, 5.5), height=1, color='white', colorSpace='rgb', opacity=1,depth=-1.0);
@@ -72,8 +72,8 @@ outcome_text = visual.TextStim(win=win, name='text',text='',font='Arial',pos=(0,
 outcome_money = visual.TextStim(win=win, name='text',text='',font='Wingdings 3',pos=(0, 2.0), height=2, wrapWidth=None, ori=0, colorSpace='rgb', opacity=1,depth=-1.0);
 
 #instructions
-instruct_screen = visual.TextStim(win, text='Welcome to the Card Guessing Game!\n\nIn this game you will be guessing the numerical value of a card.\n\nPress Button 2 (index finger) to guess low.\nPress Button 3 (middle finger) to guess higher than 5.\n\nIf you guess correctly, you gain $10.\n If you guess incorrectly, you will lose $5.\n\nRemember, you will be sharing monetary outcomes on each trial with the partner displayed at the top of the screen.', pos = (0,1), wrapWidth=20, height = 1.2)
-#instruct_screen2 = visual.TextStim(win, text='Press Button 2 to send the amount on the lower left of the screen and press Button 3 to send the amount on the lower right of the screen.\n\n Remember, whatever you send means your partner receives 3 times that amount; your partner will be notified of your decision.\n\n If you sent money s/he will choose to share it back evenly with you or keep it all for him/herself.', pos = (0,1), wrapWidth=20, height = 1.2)
+instruct_screen = visual.TextStim(win, text='Welcome to the Card Guessing Game!\n\nIn this game you will have to guess the numerical value of a card for a chance to win some money.\n\nIf you think the value of the card will be lower than 5, press with your left index finger.\n\nIf you think the value of the card will be higher than 5, press with your right index finger.', pos = (0,1), wrapWidth=20, height = 1.2)
+instruct_screen2 = visual.TextStim(win, text='Remember, you will be sharing monetary outcomes on each trial with the partner displayed at the top of the screen––either the computer or a previous participant.\n\nIf you guess correctly, you and your partner earn $10 ($5 each).\n If you guess incorrectly, you and your partner lose $5 ($2.50 each).', pos = (0,1), wrapWidth=20, height = 1.2)
 
 #exit
 exit_screen = visual.TextStim(win, text='Thanks for playing! Please wait for instructions from the experimenter.', pos = (0,1), wrapWidth=20, height = 1.2)
@@ -139,9 +139,9 @@ instruct_screen.draw()
 win.flip()
 event.waitKeys(keyList=('2'))
 
-#instruct_screen2.draw()
-#win.flip()
-#event.waitKeys(keyList=('space'))
+instruct_screen2.draw()
+win.flip()
+event.waitKeys(keyList=('2'))
 
 # main task loop
 def do_run(run, trials):
