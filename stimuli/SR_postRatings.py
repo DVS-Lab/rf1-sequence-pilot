@@ -82,9 +82,9 @@ question_map = {
     }
 
 stim_map = {
-  '3': 'friend',
-  '2': 'stranger',
-  '1': 'computer',
+  #'3': 'friend',
+  '2': 'Jack',
+  '1': 'Computer',
     }
 
 #clock
