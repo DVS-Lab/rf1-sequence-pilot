@@ -6,6 +6,19 @@ optseq2 --ntp 212 --tr 1.7 \
         --ev evt4 5.1 11 \
         --ev evt5 5.1 5 \
         --ev evt6 5.1 11 \
+        --evc -1 0 1 -1 0 1 \
+        --evc 1 0 -1 -1 0 1 \
+        --evc -1 -1 -1 1 1 1 \
+        --evc 1 -2 1 1 -2 1 \
         --nkeep 3 \
         --o rf1-test \
         --nsearch 1000 
+
+
+
+        # evt1	computer_loss
+        # evt2	computer_neutral
+        # evt3	computer_win
+        # evt4	stranger_loss
+        # evt5	stranger_neutral
+        # evt6	stranger_win
