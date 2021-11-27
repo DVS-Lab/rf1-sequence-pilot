@@ -12,6 +12,7 @@ optseq2 --ntp 212 --tr 1.7 \
         --evc 1 0 -1 -1 0 1 \
         --evc -1 -1 -1 1 1 1 \
         --evc 1 -2 1 1 -2 1 \
+        --tnullmin 0.85 --tnullmax 8.5 \
         --nkeep 3 \
         --o rf1-test \
         --nsearch 1000 
