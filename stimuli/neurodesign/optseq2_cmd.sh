@@ -1,3 +1,5 @@
+#!/bin/bash
+
 optseq2 --ntp 212 --tr 1.7 \
         --psdwin 0 25.5 0.85 \
         --ev evt1 5.1 11 \
