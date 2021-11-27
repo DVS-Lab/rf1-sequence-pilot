@@ -1,0 +1,11 @@
+optseq2 --ntp 212 --tr 1.7 \
+        --psdwin 0 25.5 0.85 \
+        --ev evt1 5.1 11 \
+        --ev evt2 5.1 5 \
+        --ev evt3 5.1 11 \
+        --ev evt4 5.1 11 \
+        --ev evt5 5.1 5 \
+        --ev evt6 5.1 11 \
+        --nkeep 3 \
+        --o rf1-test \
+        --nsearch 1000 
