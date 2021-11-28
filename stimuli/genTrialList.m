@@ -1,37 +1,42 @@
-function genSharedRewardBlocks(s)
+function genTrialList(s)
 %{
 
-trials per run?
-length of a trial: 3.5 (details below)
+trials per run: 54
+length of a trial: 5.1
 
-from Barch 2013:
+trial sequence              seconds
+decision phase with face	2.8	max (remaining goes into ISI)
+ISI                         1.7	mean
+outcome                     0.6
+total                       5.1
 
-two partners: computer, stranger, neutral
-two conditions: reward/punishment
 
-guess_dur = 1.5; %could be too fast for older adults
-ITI_dur = 1;
-feedback_dur = 1;
+evt1	computer_loss       11
+evt2	computer_neutral	5
+evt3	computer_win        11
+evt4	stranger_loss       11
+evt5	stranger_neutral	5
+evt6	stranger_win        11
 
 
 %}
 
 
 
+
 maindir = pwd;
-%Shared_Reward/params/SR_blocks/
-outfiles = fullfile(maindir,'SharedReward','params');
+outfiles = fullfile(maindir,'event-related','params');
 mkdir(outfiles);
 
 subout = fullfile(outfiles,sprintf('sub-%04d',s));
 mkdir(subout);
 
 runs = 6;
-ntrials = 52; % 2 partners, 2 outcomes --> 52/4 would be 13 repetitions of each condition in each run. enough?
+ntrials = 54;
 
-trial_types = repmat([1 2 3 4],13); % 1 computer punish, 2 computer reward, 3 stranger punish, 4 stranger reward
-ISI_distribution = repmat([1 2 3 4],13);
-ITI_distribution = repmat([1 2 3 4],13);
+trial_types = [repmat([1 3 4 6],1,11) repmat([2 5],1,5)];
+ISI_distribution = repmat([0.85 1.7 2.55],1,18);
+ITI_distribution = repmat([1 2 3 4],1,18);
 
 for r = 1:runs
     
@@ -46,15 +51,21 @@ for r = 1:runs
             case 1 %Computer Punishment
                 partner = 1;
                 feedback_mat = 1;
-            case 2 %Computer Reward
+            case 2 %Computer neutral
                 partner = 1;
                 feedback_mat = 2;
-            case 3 %Stranger Punishment
+            case 3 %Computer Reward
+                partner = 1;
+                feedback_mat = 3;
+            case 4 %Stranger Punishment
                 partner = 2;
                 feedback_mat = 1;
-            case 4 %Stranger Reward
+            case 5 %Stranger Neutral
                 partner = 2;
                 feedback_mat = 2;
+            case 6 %Stranger Reward
+                partner = 2;
+                feedback_mat = 3;
         end
         fprintf(fid,'%d,%d,%d,%d,%d,%d\n',t,trial_types(tt),partner,feedback_mat,ITI_distribution(tt),ISI_distribution(tt));
     end
