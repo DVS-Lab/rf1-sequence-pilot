@@ -1,5 +1,6 @@
-###SRNDNA
-###shared reward, block design
+###RF-1 sequence pilot
+###shared reward, ER design
+###Dominic Fareri
 
 from psychopy import visual, core, event, gui, data, sound, logging
 import csv
@@ -7,9 +8,6 @@ import datetime
 import random
 import numpy
 import os
-
-#maindir = os.getcwd()
-
 
 #parameters
 useFullScreen = True
@@ -83,7 +81,7 @@ expdir = os.getcwd()
 subjdir = '%s/logs/%s' % (expdir, subj_id)
 if not os.path.exists(subjdir):
     os.makedirs(subjdir)
-log_file = os.path.join(f'sub-{subj_id}_task-sharedreward_run-0{run}_raw.csv')
+log_file = os.path.join(f'sub-{subj_id}_task-sharedreward_run-{run}_raw.csv')
 
 globalClock = core.Clock()
 logging.setDefaultClock(globalClock)
@@ -91,8 +89,8 @@ logging.setDefaultClock(globalClock)
 timer = core.Clock()
 
 #trial handler
-trial_data = [r for r in csv.DictReader(open('params/SR-blocks/sub-' + subj_id + '/sub-'
-    + subj_id + '_run-0' + run + '_design.csv','rU'))]
+trial_data = [r for r in csv.DictReader(open('%s/event-related/params/sub-' % (os.getcwd()) + subj_id + '/sub-'
+    + subj_id + '_run-' + run + '_design.csv','rU'))]
 
 
 #trial_data = [r for r in csv.DictReader(open('SharedReward_design.csv','rU'))]
@@ -233,6 +231,22 @@ def do_run(run, trials):
         ###reset question mark color
         question.setColor('white')
 
+        #ISI
+
+        timer.reset()
+
+        given_ISI = float(trial['ISI'])
+        isi_for_trial = float(2-rt+given_ISI)
+        ISI_onset = globalClock.getTime()
+        trials.addData('ISI_onset', ISI_onset)
+
+        fixation.draw()
+        win.flip()
+        core.wait(isi_for_trial) # + wait_dur) - globalClock.getTime()) ##test #(2-reaction_time)+(ISI_s)
+
+        ISI_offset = globalClock.getTime()
+        trials.addData('ISI_offset', ISI_offset)
+
         #outcome phase
         timer.reset()
         #win.flip()
@@ -240,8 +254,8 @@ def do_run(run, trials):
 
         while timer.getTime() < outcome_dur:
             outcome_cardStim.draw()
-            pictureStim.draw()
-            nameStim.draw()
+            #pictureStim.draw()
+            #nameStim.draw()
             #win.flip()
 
             if trial['Feedback'] == '3' and resp_val == 1:
