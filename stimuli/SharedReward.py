@@ -17,7 +17,7 @@ DEBUG = False
 frame_rate=1
 instruct_dur=3
 initial_fixation_dur = 4
-#final_fixation_dur = 2
+final_fixation_dur = 8
 decision_dur=2.5
 outcome_dur=1
 
@@ -222,7 +222,7 @@ def do_run(run, trials):
             else:
                 resp_val = 0
                 resp_onset = 999
-                rt = 999
+                rt = 0
 
         trials.addData('resp', int(resp_val))
         trials.addData('resp_onset', resp_onset)
@@ -236,13 +236,14 @@ def do_run(run, trials):
         timer.reset()
 
         given_ISI = float(trial['ISI'])
-        isi_for_trial = float(2-rt+given_ISI)
+        #isi_for_trial = float(2.5-rt+given_ISI)
         ISI_onset = globalClock.getTime()
         trials.addData('ISI_onset', ISI_onset)
+        trials.addData('isi_for_trial', given_ISI)
 
         fixation.draw()
         win.flip()
-        core.wait(isi_for_trial) # + wait_dur) - globalClock.getTime()) ##test #(2-reaction_time)+(ISI_s)
+        core.wait(given_ISI)
 
         ISI_offset = globalClock.getTime()
         trials.addData('ISI_offset', ISI_offset)
@@ -329,13 +330,17 @@ def do_run(run, trials):
         trials.addData('ITIoffset', ITI_offset)
 
 
-    # Final Fixation screen after trials completed
-    #fixation.draw()
-    #win.flip()
-    #core.wait(final_fixation_dur)
+    #Final Fixation screen after trials completed
+    fixation.draw()
+    win.flip()
+    core.wait(final_fixation_dur)
+    final_fixation_offset = globalClock.getTime()
+    trials.addData('final_fix_offset', final_fixation_offset)
+
     os.chdir(subjdir)
     trials.saveAsWideText(fileName)
     os.chdir(expdir)
+
     #endTime = 0.01 # not sure if this will take a 0, so giving it 0.01 and making sure it is defined
     #expected_dur = 398
     #buffer_dur = 10
