@@ -27,15 +27,15 @@ responseKeys=('1','6','z')
 subjDlg=gui.Dlg(title="Shared Reward Task")
 subjDlg.addField('Enter Subject ID: ')
 #subjDlg.addField('Enter Friend Name: ') #1
-subjDlg.addField('Enter Partner Name: ')#NOTE: PARTNER IS THE CONFEDERATE/STRANGER #2
+#subjDlg.addField('Enter Partner Name: ')#NOTE: PARTNER IS THE CONFEDERATE/STRANGER #2
 subjDlg.addField('Run:', choices=['1', '2', '3', '4', '5', '6'])
 subjDlg.show()
 
 if gui.OK:
     subj_id=subjDlg.data[0]
     #friend_id=subjDlg.data[1]
-    stranger_id=subjDlg.data[1]
-    run = subjDlg.data[2]
+    #stranger_id=subjDlg.data[1]
+    run = subjDlg.data[1]
 
 else:
     sys.exit()
@@ -103,12 +103,11 @@ trials_run = data.TrialHandler(trial_data[:], 1, method="sequential") #change to
 # change names accordingly here
 
 stim_map = {
-  '2': stranger_id,
+  '2': 'Jack',
   '1': 'Computer',
   }
 
 image_map = {
-  '3': 'friend',
   '2': 'stranger',
   '1': 'computer',
 }
