@@ -34,8 +34,8 @@ subjDlg.show()
 
 if gui.OK:
     subj_id=subjDlg.data[0]
-    friend_id=subjDlg.data[1]
-    stranger_id=subjDlg.data[2]
+    #friend_id=subjDlg.data[1]
+    #stranger_id=subjDlg.data[1]
     run = range(0,1)
 
 else:
