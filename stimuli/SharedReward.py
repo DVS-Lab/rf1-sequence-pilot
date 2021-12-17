@@ -148,9 +148,9 @@ def do_run(run, trials):
     #wait for trigger
     ready_screen.draw()
     win.flip()
-    event.waitKeys(keyList=('equal'))
     globalClock.reset()
     studyStart = globalClock.getTime()
+    event.waitKeys(keyList=('equal'))
     trials.addData('studyStart',studyStart)
 
     #Initial Fixation screen
@@ -159,8 +159,8 @@ def do_run(run, trials):
     initial_fixation_Onset = globalClock.getTime()
     trials.addData('InitFixOnset',initial_fixation_Onset)
     core.wait(initial_fixation_dur)
-
-
+    initial_fixation_offset = globalClock.getTime()
+    trials.addData('InitFixOffset',initial_fixation_offset)
 
     for trial in trials:
         condition_label = stim_map[trial['Partner']]
@@ -169,7 +169,6 @@ def do_run(run, trials):
         image = os.path.join(imagepath, "%s.png") % image_label
         nameStim.setText(condition_label)
         pictureStim.setImage(image)
-
 
         #decision phase
         timer.reset()
@@ -182,15 +181,18 @@ def do_run(run, trials):
         decision_onset = globalClock.getTime()
         trials.addData('decision_onset',decision_onset)
 
-
         while timer.getTime() < decision_dur:
             cardStim.draw()
             question.draw()
             pictureStim.draw()
             nameStim.draw()
+            #dec_screen_pre = globalClock.getTime()
             win.flip()
+            #dec_screen_post = globalClock.getTime()
 
             resp = event.getKeys(keyList = responseKeys)
+            #trials.addData('dec_screen_pre',dec_screen_pre)
+            #trials.addData('dec_screen_post',dec_screen_post)
 
             if len(resp)>0:
                 if resp[0] == 'z':
@@ -202,30 +204,39 @@ def do_run(run, trials):
                     core.quit()
                 resp_val = int(resp[0])
                 if resp_val==1:
-                    resp_onset = globalClock.getTime()
+                    #resp_onset = globalClock.getTime()
                     question.setColor('darkorange')
-                    rt = resp_onset - decision_onset
+                    #rt = resp_onset - decision_onset
                     #core.wait(decision_dur - rt)
                 if resp_val==6:
-                    resp_onset = globalClock.getTime()
+                    #resp_onset = globalClock.getTime()
                     question.setColor('darkorange')
-                    rt = resp_onset - decision_onset
+                    #rt = resp_onset - decision_onset
                     #core.wait(decision_dur -rt)
                 cardStim.draw()
                 question.draw()
                 pictureStim.draw()
                 nameStim.draw()
+                #orangeText_pre = globalClock.getTime()
                 win.flip()
-                core.wait(decision_dur - rt)
+                #orangeText_post = globalClock.getTime()
+                resp_onset = globalClock.getTime()
+                rt = resp_onset - decision_onset
+                core.wait(0.1)
+                #core.wait(decision_dur - rt)
                 break
             else:
                 resp_val = 0
-                resp_onset = 999
-                rt = 0
+                #resp_onset = 999
+                resp_onset = globalClock.getTime()
+                #rt = 0
+                rt = resp_onset - decision_onset
 
         trials.addData('resp', int(resp_val))
         trials.addData('resp_onset', resp_onset)
         trials.addData('rt', rt)
+        #trials.addData('orangeText_pre',orangeText_pre)
+        #trials.addData('orangeText_post',orangeText_post)
 
         ###reset question mark color
         question.setColor('white')
@@ -235,18 +246,21 @@ def do_run(run, trials):
         timer.reset()
 
         given_ISI = float(trial['ISI'])
-        #isi_for_trial = float(2.5-rt+given_ISI)
+        isi_for_trial = float(given_ISI+(2.5-(rt+0.1)))
         ISI_onset = globalClock.getTime()
         trials.addData('ISI_onset', ISI_onset)
-        trials.addData('isi_for_trial', given_ISI)
+        trials.addData('isi_for_trial', isi_for_trial)
 
         fixation.draw()
+        #ISI_pre_onset = globalClock.getTime()
         win.flip()
-        core.wait(given_ISI)
+        #ISI_post_onset = globalClock.getTime()
+        core.wait(isi_for_trial)
 
         ISI_offset = globalClock.getTime()
         trials.addData('ISI_offset', ISI_offset)
-
+        #trials.addData('ISI_pre_onset',ISI_pre_onset)
+        #trials.addData('ISI_post_onset',ISI_post_onset)
         #outcome phase
         timer.reset()
         #win.flip()
@@ -301,10 +315,14 @@ def do_run(run, trials):
             outcome_money.setColor(outcome_color)
             outcome_text.draw()
             outcome_money.draw()
+            #outcome_pre_onset = globalClock.getTime()
             win.flip()
+            #outcome_post_onset = globalClock.getTime()
             core.wait(outcome_dur)
             #trials.addData('outcome_val', outcome_txt)
             trials.addData('outcome_onset', outcome_onset)
+            #trials.addData('outcome_pre_onset', outcome_pre_onset)
+            #trials.addData('outcome_post_onset', outcome_post_onset)
 
             outcome_offset = globalClock.getTime()
             trials.addData('outcome_offset', outcome_offset)
@@ -321,20 +339,28 @@ def do_run(run, trials):
         timer.reset()
         ITI_onset = globalClock.getTime()
         iti_for_trial = float(trial['ITI'])
-        while timer.getTime() < iti_for_trial:
-            fixation.draw()
-            win.flip()
+        #while timer.getTime() < iti_for_trial:
+        fixation.draw()
+        #ITI_pre_onset = globalClock.getTime()
+        win.flip()
+        #ITI_post_onset = globalClock.getTime()
+        core.wait(iti_for_trial)
         ITI_offset = globalClock.getTime()
         trials.addData('ITIonset', ITI_onset)
         trials.addData('ITIoffset', ITI_offset)
-
+        #trials.addData('ITI_pre_onset',ITI_pre_onset)
+        #trials.addData('ITI_post_onset',ITI_post_onset)
 
     #Final Fixation screen after trials completed
     fixation.draw()
+    #final_fix_pre = globalClock.getTime()
     win.flip()
+    #final_fix_post = globalClock.getTime()
     core.wait(final_fixation_dur)
     final_fixation_offset = globalClock.getTime()
     trials.addData('final_fix_offset', final_fixation_offset)
+    #trials.addData('final_fix_pre', final_fix_pre)
+    #trials.addData('final_fix_post', final_fix_post)
 
     os.chdir(subjdir)
     trials.saveAsWideText(fileName)
