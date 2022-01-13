@@ -17,7 +17,7 @@ DEBUG = False
 frame_rate=1
 instruct_dur=3
 initial_fixation_dur = 4
-final_fixation_dur = 8
+#final_fixation_dur = 8
 decision_dur=2.5
 outcome_dur=1
 
@@ -29,6 +29,8 @@ subjDlg.addField('Enter Subject ID: ')
 #subjDlg.addField('Enter Friend Name: ') #1
 #subjDlg.addField('Enter Partner Name: ')#NOTE: PARTNER IS THE CONFEDERATE/STRANGER #2
 subjDlg.addField('Run:', choices=['1', '2', '3', '4', '5', '6'])
+subjDlg.addField('MB:', choices=['1', '3', '6'])
+subjDlg.addField('ME:', choices=['1', '4'])
 subjDlg.show()
 
 if gui.OK:
@@ -36,14 +38,18 @@ if gui.OK:
     #friend_id=subjDlg.data[1]
     #stranger_id=subjDlg.data[1]
     run = subjDlg.data[1]
-
+    mb = subjDlg.data[2]
+    me = subjDlg.data[3]
 else:
     sys.exit()
 
 run_data = {
     'Participant ID': subj_id,
     'Date': str(datetime.datetime.now()),
-    'Description': 'RF1 Sequence Pilot - SharedReward Task'
+    'Description': 'RF1 Sequence Pilot - SharedReward Task',
+    'Run': run,
+    'MB': mb,
+    'ME': me
     }
 
 #window setup
@@ -81,7 +87,7 @@ expdir = os.getcwd()
 subjdir = '%s/logs/%s' % (expdir, subj_id)
 if not os.path.exists(subjdir):
     os.makedirs(subjdir)
-log_file = os.path.join(f'sub-{subj_id}_task-sharedreward_run-{run}_raw.csv')
+log_file = os.path.join(f'sub-{subj_id}_task-sharedreward_run-{run}_mb-{mb}_me-{me}_raw.csv')
 
 globalClock = core.Clock()
 logging.setDefaultClock(globalClock)
@@ -143,7 +149,7 @@ event.waitKeys(keyList=('2'))
 # main task loop
 def do_run(run, trials):
     resp=[]
-    fileName=log_file.format(subj_id,run)
+    fileName=log_file.format(subj_id,run,mb,me)
 
     #wait for trigger
     ready_screen.draw()
@@ -161,6 +167,8 @@ def do_run(run, trials):
     core.wait(initial_fixation_dur)
     initial_fixation_offset = globalClock.getTime()
     trials.addData('InitFixOffset',initial_fixation_offset)
+
+    #globalClock.reset()
 
     for trial in trials:
         condition_label = stim_map[trial['Partner']]
@@ -353,29 +361,24 @@ def do_run(run, trials):
 
     #Final Fixation screen after trials completed
     fixation.draw()
-    #final_fix_pre = globalClock.getTime()
     win.flip()
-    #final_fix_post = globalClock.getTime()
-    core.wait(final_fixation_dur)
+    expected_dur = 426
+    buffer_dur = 4
+    total_dur = expected_dur + buffer_dur
+    if globalClock.getTime() < total_dur:
+        endTime = (total_dur - globalClock.getTime())
+    else:
+        endTime = buffer_dur
+    core.wait(endTime)
     final_fixation_offset = globalClock.getTime()
     trials.addData('final_fix_offset', final_fixation_offset)
-    #trials.addData('final_fix_pre', final_fix_pre)
-    #trials.addData('final_fix_post', final_fix_post)
 
     os.chdir(subjdir)
     trials.saveAsWideText(fileName)
     os.chdir(expdir)
 
     #endTime = 0.01 # not sure if this will take a 0, so giving it 0.01 and making sure it is defined
-    #expected_dur = 398
-    #buffer_dur = 10
-    #total_dur = expected_dur + buffer_dur
-    #if globalClock.getTime() < total_dur:
-    #    endTime = (total_dur - globalClock.getTime())
-    #else:
-    #    endTime = buffer_dur
-    #core.wait(endTime)
-    print(globalClock.getTime())
+
 
 for run, trials in enumerate([trials_run]):
     do_run(run, trials)
