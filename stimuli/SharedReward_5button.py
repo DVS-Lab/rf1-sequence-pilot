@@ -239,6 +239,7 @@ def do_run(run, trials):
                 resp_onset = globalClock.getTime()
                 #rt = 0
                 rt = resp_onset - decision_onset
+                core.wait(0.1)
 
         trials.addData('resp', int(resp_val))
         trials.addData('resp_onset', resp_onset)
