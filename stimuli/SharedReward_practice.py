@@ -34,8 +34,8 @@ subjDlg.show()
 
 if gui.OK:
     subj_id=subjDlg.data[0]
-    friend_id=subjDlg.data[1]
-    stranger_id=subjDlg.data[2]
+    #friend_id=subjDlg.data[1]
+    #stranger_id=subjDlg.data[1]
     run = range(0,1)
 
 else:
@@ -90,10 +90,10 @@ logging.setDefaultClock(globalClock)
 timer = core.Clock()
 
 #trial handler
-trial_data_1 = [r for r in csv.DictReader(open('params/SR_blocks/sub-' + subj_id + '/sub-'
-    + subj_id + '_run-01_design.csv','rU'))]
-trial_data_2  = [r for r in csv.DictReader(open('params/SR_blocks/sub-' + subj_id + '/sub-'
-    + subj_id + '_run-02_design.csv','rU'))]
+trial_data_1 = [r for r in csv.DictReader(open('event-related/params/sub-' + subj_id + '/sub-'
+    + subj_id + '_run-1_design.csv','rU'))]
+trial_data_2  = [r for r in csv.DictReader(open('event-related/params/sub-' + subj_id + '/sub-'
+    + subj_id + '_run-2_design.csv','rU'))]
 
 #trial_data = [r for r in csv.DictReader(open('SharedReward_design.csv','rU'))]
 #trials = data.TrialHandler(trial_data[:], 1, method="sequential") #change to [] for full run
