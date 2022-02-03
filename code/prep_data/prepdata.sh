@@ -18,6 +18,7 @@ sub=$1
 
 # ensure paths are correct irrespective from where user runs the script
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+codedir="$(dirname "$codedir")"
 dsroot="$(dirname "$codedir")"
 
 
@@ -38,9 +39,9 @@ singularity run --cleanenv \
 -B $dsroot:/out \
 -B $sourcedata:/sourcedata \
 /data/tools/heudiconv-0.9.0.simg \
--d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm
+-d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 -s $sub \
--f /out/code/prepdata/heuristics.py \
+-f /out/code/prep_data/heuristics.py \
 -c dcm2niix -b --minmeta -o /out/bids --overwrite
 
 # run Jeff's code to fix field map, but first correct permissions
@@ -53,8 +54,8 @@ chmod -R uga+rw $dsroot/bids/sub-$sub
 #
 ## note that you may need to install pydeface via pip or conda
 bidsroot=$dsroot/bids
-pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
-mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
+#pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
+#mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
 #
 ## shift dates on scans to reduce likelihood of re-identification
 python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv

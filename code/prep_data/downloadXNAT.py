@@ -30,7 +30,7 @@ outputDir = "/data/sourcedata/rf1-sequence-pilot"
 
 subs=os.listdir(outputDir)
 
-def download_sub(url, session, outputDir, subject):
+def download_sub(url, session, outputDir):
     user = input("Enter Your XNAT Username\n\n>> ")
     password = getpass.getpass("Enter Your XNAT Password\n\n>> ")
     with xnat.connect(url, user, password) as connect:
@@ -42,4 +42,4 @@ def download_sub(url, session, outputDir, subject):
                 sub.download_dir(outputDir)
     return
 
-download_sub(url, session, outputDir, subject)
+download_sub(url, session, outputDir)
