@@ -1,7 +1,6 @@
 {
   "AcquisitionMatrixPE": 62,
   "AcquisitionNumber": 1,
-  "AcquisitionTime": "13:47:44.140000",
   "BandwidthPerPixelPhaseEncode": 23.7,
   "BaseResolution": 86,
   "BodyPartExamined": "BRAIN",
@@ -50,21 +49,15 @@
   "ReceiveCoilName": "HeadNeck_20",
   "ReconMatrixPE": 86,
   "RepetitionTime": 1.7,
-  "SAR": 0.0211223,
   "ScanOptions": "FS",
   "ScanningSequence": "EP",
   "SequenceName": "epfid2d1_62",
   "SequenceVariant": "SK_SS_OSP",
   "SeriesDescription": "CMRR_MB1_IP0_ME1_TR1700",
   "SeriesNumber": 7,
-  "ShimSetting": [1415, -7473, 6454, 379, 53, 82, 42, 106],
   "SliceThickness": 2.7,
-  "SliceTiming": [1.6175, 1.5575, 1.495, 1.4325, 1.37, 1.3075, 1.245, 1.1825, 1.12, 1.0575, 0.9975, 0.935, 0.8725, 0.81, 0.7475, 0.685, 0.6225, 0.56, 0.4975, 0.4375, 0.375, 0.3125, 0.25, 0.1875, 0.125, 0.0625, 0],
   "SoftwareVersions": "syngo_MR_E11",
   "SpacingBetweenSlices": 2.97,
   "StationName": "AWP166048",
   "TaskName": "TODO: full task name for sharedreward",
-  "TotalReadoutTime": 0.0417035,
-  "TxRefAmp": 251.505,
-  "WipMemBlock": "b849dfe8-758e-4333-8e83-52ad0edbf9c8||Sequence: R016 ve11e/master r/434b28f1; Aug  7 2019 18:53:46 by eja"
-}
+  "TotalReadoutTime": 0.0417035}

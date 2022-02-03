@@ -1,7 +1,6 @@
 {
   "AcquisitionMatrixPE": 62,
   "AcquisitionNumber": 1,
-  "AcquisitionTime": "14:06:27.592500",
   "BandwidthPerPixelPhaseEncode": 22.333,
   "BaseResolution": 86,
   "BodyPartExamined": "BRAIN",
@@ -52,21 +51,16 @@
   "ReceiveCoilName": "HeadNeck_20",
   "ReconMatrixPE": 86,
   "RepetitionTime": 1.7,
-  "SAR": 0.00931083,
   "ScanOptions": "FS",
   "ScanningSequence": "EP",
   "SequenceName": "epfid2d1_62",
   "SequenceVariant": "SK_SS_OSP",
   "SeriesDescription": "CMRR_MB6_IP0_ME1_TR1700",
   "SeriesNumber": 11,
-  "ShimSetting": [1410, -7450, 6421, 359, 51, -133, -54, 54],
   "SliceThickness": 2.7,
   "SliceTiming": [1.4925, 1.3075, 1.12, 0.9325, 0.7475, 0.56, 0.3725, 0.1875, 0, 1.4925, 1.3075, 1.12, 0.9325, 0.7475, 0.56, 0.3725, 0.1875, 0, 1.4925, 1.3075, 1.12, 0.9325, 0.7475, 0.56, 0.3725, 0.1875, 0, 1.4925, 1.3075, 1.12, 0.9325, 0.7475, 0.56, 0.3725, 0.1875, 0, 1.4925, 1.3075, 1.12, 0.9325, 0.7475, 0.56, 0.3725, 0.1875, 0, 1.4925, 1.3075, 1.12, 0.9325, 0.7475, 0.56, 0.3725, 0.1875, 0],
   "SoftwareVersions": "syngo_MR_E11",
   "SpacingBetweenSlices": 2.97,
   "StationName": "AWP166048",
   "TaskName": "TODO: full task name for sharedreward",
-  "TotalReadoutTime": 0.0442561,
-  "TxRefAmp": 251.505,
-  "WipMemBlock": "d51ddb7f-a145-4c24-836d-7fc4b6d4e8a2||Sequence: R016 ve11e/master r/434b28f1; Aug  7 2019 18:53:46 by eja"
-}
+  "TotalReadoutTime": 0.0442561}
