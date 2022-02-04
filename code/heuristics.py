@@ -12,18 +12,18 @@ def infotodict(seqinfo):
 
 
     #me1
-    mb1me1 = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb1me1_bold')
-    mb3me1 = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me1_bold')
+    mb1me1 =       create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb1me1_bold')
+    mb3me1 =       create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me1_bold')
     mb3me1_sbref = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me1_sbref')
-    mb6me1 =create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me1_bold')
+    mb6me1 =       create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me1_bold')
     mb6me1_sbref = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me1_sbref')
 
     #me4
-    mb1me4 =create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb1me4_bold')
-    mb3me4 =create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me4_bold')
-    mb3me4_sbref =create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me4_sbref')
-    mb6me4 =  create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me4_bold')
-    mb6me4_sbref = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me4_sbref')
+    mb1me4 =            create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb1me4_bold')
+    mb3me4 =            create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me4_bold')
+    mb3me4_sbref =      create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me4_sbref')
+    mb6me4 =            create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me4_bold')
+    mb6me4_sbref =      create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me4_sbref')
 
 
 
@@ -33,12 +33,18 @@ def infotodict(seqinfo):
     info = {t1w: [],mag: [],phase: [],
 
             mb1me1: [],
-            mb3me1: [], mb3me1_sbref: [],
-            mb6me1: [], mb6me1_sbref: [],
+            mb3me1: [],
+            mb3me1_sbref: [],
+            mb6me1: [],
+            mb6me1_sbref: [],
 
             mb1me4: [],
-            mb3me4: [], mb3me4_sbref: [],
-            mb6me4: [], mb6me4_sbref: [],}
+            mb3me4: [],
+            mb3me4_sbref: [],
+            mb6me4: [],
+            mb6me4_sbref: [],
+
+            }
 
     list_of_ids = [s.series_id for s in seqinfo]
     for s in seqinfo:
@@ -52,7 +58,6 @@ def infotodict(seqinfo):
         # no multi-echo
         if (s.dim4 >= 150) and ('MB1_' in s.protocol_name) and ('_ME1' in s.protocol_name):
             info[mb1me1].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
         elif (s.dim4 >= 150) and ('MB3_' in s.protocol_name) and ('_ME1' in s.protocol_name):
             info[mb3me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
@@ -65,7 +70,6 @@ def infotodict(seqinfo):
         # multi-echo standard
         if (s.dim4 >= 150) and ('MB1_' in s.protocol_name) and ('_ME4' in s.protocol_name):
             info[mb1me4].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
         elif (s.dim4 >= 150) and ('MB3_' in s.protocol_name) and ('_ME4' in s.protocol_name) :
             info[mb3me4].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
