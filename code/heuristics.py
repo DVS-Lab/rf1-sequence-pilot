@@ -7,8 +7,8 @@ def create_key(template, outtype=('nii.gz',), annotation_classes=None):
 
 def infotodict(seqinfo):
     t1w = create_key('sub-{subject}/anat/sub-{subject}_T1w')
-    # mag = create_key('sub-{subject}/fmap/sub-{subject}_magnitude')
-    # phase = create_key('sub-{subject}/fmap/sub-{subject}_phasediff')
+    mag = create_key('sub-{subject}/fmap/sub-{subject}_run-{item:01d}_magnitude')
+    phase = create_key('sub-{subject}/fmap/sub-{subject}_run-{item:01d}_phasediff')
 
 
     #me1
