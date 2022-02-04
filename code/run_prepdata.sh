@@ -5,7 +5,7 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
 
 sourcedir=/data/sourcedata/rf1-sequence-pilot/*
-DLscript=${scriptdir}/prep_data/downloadXNAT.py
+DLscript=${scriptdir}/downloadXNAT.py
 
 python $DLscript
 
@@ -13,7 +13,7 @@ for sub in $sourcedir;do
 	sub=${sub%_1};
   	sub=${sub##*-}; 
 
-	script=${scriptdir}/prep_data/prepdata.sh
+	script=${scriptdir}/prepdata.sh
 	NCORES=8
 	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
 		sleep 1s
