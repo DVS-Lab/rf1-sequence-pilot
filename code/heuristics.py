@@ -7,8 +7,8 @@ def create_key(template, outtype=('nii.gz',), annotation_classes=None):
 
 def infotodict(seqinfo):
     t1w = create_key('sub-{subject}/anat/sub-{subject}_T1w')
-    # mag = create_key('sub-{subject}/fmap/sub-{subject}_magnitude')
-    # phase = create_key('sub-{subject}/fmap/sub-{subject}_phasediff')
+    mag = create_key('sub-{subject}/fmap/sub-{subject}_run-{item:01d}_magnitude')
+    phase = create_key('sub-{subject}/fmap/sub-{subject}_run-{item:01d}_phasediff')
 
 
     #me1
@@ -30,7 +30,7 @@ def infotodict(seqinfo):
         # mag: [],
         # phase: [],
 
-    info = {t1w: [],
+    info = {t1w: [],mag: [], phase: [],
 
             mb1me1: [],
             mb3me1: [],
@@ -51,32 +51,32 @@ def infotodict(seqinfo):
         if ('T1w-anat_mpg_07sag_iso' in s.protocol_name) and ('NORM' in s.image_type):
             info[t1w] = [s.series_id]
         if ('gre_field' in s.protocol_name) and ('NORM' in s.image_type):
-            info[mag] = [s.series_id]
+            info[mag].append(s.series_id)
         if ('gre_field' in s.protocol_name) and ('P' in s.image_type):
-            info[phase] = [s.series_id]
+            info[phase].append(s.series_id)
 
         # no multi-echo
-        if (s.dim4 >= 100) and ('MB1_IP2_ME1' in s.protocol_name):
+        if (s.dim4 >= 150) and ('MB1_' in s.protocol_name) and ('_ME1' in s.protocol_name):
             info[mb1me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
-        elif (s.dim4 >= 100) and ('MB3_IP2_ME1' in s.protocol_name):
+        elif (s.dim4 >= 150) and ('MB3_' in s.protocol_name) and ('_ME1' in s.protocol_name):
             info[mb3me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb3me1_sbref].append(list_of_ids[idx -1])
-        elif (s.dim4 >= 100) and ('MB6_IP2_ME1' in s.protocol_name):
+        elif  (s.dim4 >= 150) and ('MB6_' in s.protocol_name) and ('_ME1' in s.protocol_name):
             info[mb6me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb6me1_sbref].append(list_of_ids[idx -1])
 
         # multi-echo standard
-        if (s.dim4 >= 100) and ('MB1_IP2_ME4' in s.protocol_name):
+        if (s.dim4 >= 150) and ('MB1_' in s.protocol_name) and ('_ME4' in s.protocol_name):
             info[mb1me4].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
-        elif (s.dim4 >= 100) and ('MB3_IP2_ME4' in s.protocol_name):
+        elif (s.dim4 >= 150) and ('MB3_' in s.protocol_name) and ('_ME4' in s.protocol_name) :
             info[mb3me4].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb3me4_sbref].append(list_of_ids[idx -1])
-        elif (s.dim4 >= 100) and ('MB6_IP2_ME4' in s.protocol_name):
+        elif (s.dim4 >= 150) and ('MB6_' in s.protocol_name) and ('_ME4' in s.protocol_name):
             info[mb6me4].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb6me4_sbref].append(list_of_ids[idx -1])
