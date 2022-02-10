@@ -23,7 +23,7 @@ initial_fixation_dur = 4
 decision_dur=2.5
 outcome_dur=1
 
-responseKeys=('1','3','z')
+responseKeys=('1','3','z','num_1','num_3')
 
 #get subjID
 subjDlg=gui.Dlg(title="Shared Reward Task")
@@ -73,6 +73,7 @@ outcome_money = visual.TextStim(win=win, name='text',text='',font='Wingdings 3',
 #instructions
 instruct_screen = visual.TextStim(win, text='Welcome to the Card Guessing Game! In this game you will be guessing the numerical value of a card.\n\n Press with your left index finger \n(1 key) to guess low.\nPress with your right index finger \n(3 key) to guess higher than 5.\n\n If you guess correctly, you gain $10.\n If you guess incorrectly, you will lose $5.\n\n Remember, you will be sharing monetary outcomes on each trial with the partner displayed at the top of the screen.', pos = (0,1), wrapWidth=20, height = 1.2)
 #instruct_screen2 = visual.TextStim(win, text='Press Button 2 to send the amount on the lower left of the screen and press Button 3 to send the amount on the lower right of the screen.\n\n Remember, whatever you send means your partner receives 3 times that amount; your partner will be notified of your decision.\n\n If you sent money s/he will choose to share it back evenly with you or keep it all for him/herself.', pos = (0,1), wrapWidth=20, height = 1.2)
+
 
 #exit
 exit_screen = visual.TextStim(win, text='Thanks for playing! Please wait for instructions from the experimenter.', pos = (0,1), wrapWidth=20, height = 1.2)
@@ -192,16 +193,16 @@ def do_run(run, trials):
             win.flip()
 
             resp = event.getKeys(keyList = responseKeys)
-
             if len(resp)>0:
-                if resp[0] == 'z':
+                resp_str = str(resp[-1])[-1]
+                resp_val = int(resp_str)
+                if resp_str == 'z':
                 #trials.saveAsText(fileName=log_file.format(subj_id),delim=',',dataOut='all_raw')
                     os.chdir(subjdir)
                     trials.saveAsWideText(fileName)
                     os.chdir(expdir)
                     win.close()
                     core.quit()
-                resp_val = int(resp[0])
                 if resp_val==1:
                     resp_onset = globalClock.getTime()
                     question.setColor('darkorange')
