@@ -27,6 +27,7 @@
     "            x['Feedback'] = x['Feedback'].map(feedback_codes).astype('str')\n",
     "            x['resp'] = x['resp'].map(Button_codes).astype('str')\n",
     "            x['feed_type'] = x[['Partner', 'Feedback']].agg('_'.join, axis=1)\n",
+    "            x['resp'] = x[['Partner', 'resp']].agg('_'.join, axis=1)\n",
     "            \n",
     "            data=[]\n",
     "            for index, row in x.iterrows(): #seperating out 2 kinds of events per file\n",

@@ -14,7 +14,7 @@
 
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
-baseout=${maindir}/derivatives/fsl/EVfiles
+baseout=${maindir}/derivatives/fsl/EVFiles
 if [ ! -d ${baseout} ]; then
   mkdir -p $baseout
 fi
@@ -22,8 +22,8 @@ fi
 sub=$1
 
 
-for run in 1 2; do
-  input=${maindir}/bids/sub-${sub}/func/sub-${sub}_task-doors_run-0${run}_events.tsv
+for acq in mb1me1 mb1me4 mb3me1 mb3me4 mb6me1 mb6me4; do
+  input=${maindir}/bids/sub-${sub}/func/sub-${sub}_task-sharedreward_run-*_acq-${acq}_events.tsv
   output=${baseout}/sub-${sub}/doors
   mkdir -p $output
   if [ -e $input ]; then
