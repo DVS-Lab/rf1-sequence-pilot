@@ -24,7 +24,7 @@ sub=$1
 
 for acq in mb1me1 mb1me4 mb3me1 mb3me4 mb6me1 mb6me4; do
   input=${maindir}/bids/sub-${sub}/func/sub-${sub}_task-sharedreward_run-*_acq-${acq}_events.tsv
-  output=${baseout}/sub-${sub}/doors
+  output=${baseout}/sub-${sub}/SharedReward
   mkdir -p $output
   if [ -e $input ]; then
     bash /data/tools/bidsutils/BIDSto3col/BIDSto3col.sh $input ${output}/run-${run}
