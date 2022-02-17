@@ -71,9 +71,9 @@ try
         fprintf('incomplete data for sub-%d_run-%d\n', subj, r+1)
     end
     
-    
-    onset_decision = T.decision_onset; % switch to outcome_onset? add regressor for decision? minimal spacing...
-    onset_outcome = T.outcome_onset;
+    start_time=T.InitFixOnset[1]
+    onset_decision = T.decision_onset - start_time; % switch to outcome_onset? add regressor for decision? minimal spacing...
+    onset_outcome = T.outcome_onset - start_time;
     duration = T.outcome_offset - T.outcome_onset; % outcome
     RT = T.rt;
     Partner = T.Partner;
