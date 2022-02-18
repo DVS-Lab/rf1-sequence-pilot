@@ -48,8 +48,9 @@ try
     
     
     % sub-10008_task-sharedreward_run-1_mb-1_me-1_raw.csv --> sub-10008_task-sharedreward_run-1_acq-mb1me1_raw.csv
+  
     fname = fullfile(logdir,num2str(subj),sprintf('sub-%04d_task-sharedreward_run-%d_acq-%s_raw.csv',subj,r,acqs{r}));
-    
+ 
     if r == 0 % only needed for first pass through
         [sublogdir,~,~] = fileparts(fname);
         nfiles = dir([sublogdir '/*.csv']);
@@ -71,7 +72,7 @@ try
         fprintf('incomplete data for sub-%d_run-%d\n', subj, r+1)
     end
     
-    start_time=T.InitFixOnset[1]
+    start_time=T.InitFixOnset(1)
     onset_decision = T.decision_onset - start_time; % switch to outcome_onset? add regressor for decision? minimal spacing...
     onset_outcome = T.outcome_onset - start_time;
     duration = T.outcome_offset - T.outcome_onset; % outcome
@@ -140,6 +141,6 @@ try
 catch ME
     disp(ME.message)
     disp(['check line: ' ME.stack.line ]);
-    keyboard
+    %keyboard
 end
 
