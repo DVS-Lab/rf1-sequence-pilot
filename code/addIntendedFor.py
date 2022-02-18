@@ -5,7 +5,7 @@ import os
 import subprocess
 
 #gets current working directory If your bids is in the same folder as this file this should work for everyone
-cwd = os.getcwd() 
+cwd = dir_path = os.path.dirname(os.path.realpath(__file__)) 
 bidsdir = os.path.join('%s/bids'%(cwd))
 
 files = os.listdir(bidsdir)
@@ -21,7 +21,7 @@ for subj in subs:
     #makes list of the func files to add into the intended for field
     files = ["func/%s"%(file) for file in os.listdir('%s/%s/func'%(bidsdir,subj))]
     files_txt = [i for i in files if i.endswith('.nii.gz')]
-     if not all(['run' in str for str in files_json]):
+    if not all(['run' in str for str in files_json]):
 
         #This could be done better but we open the json files ('r' for read only) as a dictionary add the Intended for key 
         #and add the func files to the key value
