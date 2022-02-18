@@ -122,7 +122,8 @@ try
             
             
             if RT(t) == 0 %missed response
-                fprintf(fid,'%f\t%f\t%s\t%s\n',onset_decision(t),2.8,'missed_trial','n/a'); % max duration with no outcome
+                fprintf(fid,'%f\t%f\t%s\t%s\n',onset_decision(t),2.8,'miss_decision','n/a'); % max duration with outcome as #
+                fprintf(fid,'%f\t%f\t%s\t%s\n',onset_outcome(t),duration(t),'miss_outcome','n/a'); % outcome is just #
             else
                 % Ori: Right index is 2, left index is 7
                 if Partner(t) == 1 % computer
