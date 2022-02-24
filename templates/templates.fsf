@@ -33,10 +33,10 @@ set fmri(sscleanup_yn) 0
 set fmri(outputdir) ""
 
 # TR(s)
-set fmri(tr) 1.700000
+set fmri(tr) TR_INFO
 
 # Total volumes
-set fmri(npts) 260
+set fmri(npts) NVOLUMES
 
 # Delete volumes
 set fmri(ndelete) 0
@@ -273,13 +273,13 @@ set fmri(totalVoxels) 107730480
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10007/func/sub-10007_task-sharedreward_acq-mb1me1_space-MNI152NLin2009cAsym_desc-preproc_bold"
+set feat_files(1) "DATA"
 
 # Add confound EVs text file
 set fmri(confoundevs) 1
 
 # Confound EVs text file for analysis 1
-set confoundev_files(1) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/confounds/sub-10007/sub-10007_task-sharedreward_acq-mb1me1_desc-confounds_desc-fslConfounds.tsv"
+set confoundev_files(1) "CONFOUNDEVS"
 
 # EV 1 title
 set fmri(evtitle1) "CMP_L"
@@ -314,7 +314,7 @@ set fmri(tempfilt_yn1) 0
 set fmri(deriv_yn1) 0
 
 # Custom EV file (EV 1)
-set fmri(custom1) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_guess_leftButton_computer.txt"
+set fmri(custom1) "EVDIR/_guess_leftButton_computer.txt"
 
 # Orthogonalise EV 1 wrt EV 0
 set fmri(ortho1.0) 0
@@ -388,7 +388,7 @@ set fmri(tempfilt_yn2) 0
 set fmri(deriv_yn2) 0
 
 # Custom EV file (EV 2)
-set fmri(custom2) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_guess_rightButton_computer.txt"
+set fmri(custom2) "EVDIR/_guess_rightButton_computer.txt"
 
 # Orthogonalise EV 2 wrt EV 0
 set fmri(ortho2.0) 0
@@ -462,7 +462,7 @@ set fmri(tempfilt_yn3) 0
 set fmri(deriv_yn3) 0
 
 # Custom EV file (EV 3)
-set fmri(custom3) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_guess_leftButton_face.txt"
+set fmri(custom3) "EVDIR/_guess_leftButton_face.txt"
 
 # Orthogonalise EV 3 wrt EV 0
 set fmri(ortho3.0) 0
@@ -536,7 +536,7 @@ set fmri(tempfilt_yn4) 0
 set fmri(deriv_yn4) 0
 
 # Custom EV file (EV 4)
-set fmri(custom4) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_guess_rightButton_face.txt"
+set fmri(custom4) "EVDIR/_guess_rightButton_face.txt"
 
 # Orthogonalise EV 4 wrt EV 0
 set fmri(ortho4.0) 0
@@ -610,7 +610,7 @@ set fmri(tempfilt_yn5) 0
 set fmri(deriv_yn5) 0
 
 # Custom EV file (EV 5)
-set fmri(custom5) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_outcome_computer_punish.txt"
+set fmri(custom5) "EVDIR/_outcome_computer_punish.txt"
 
 # Orthogonalise EV 5 wrt EV 0
 set fmri(ortho5.0) 0
@@ -684,7 +684,7 @@ set fmri(tempfilt_yn6) 0
 set fmri(deriv_yn6) 0
 
 # Custom EV file (EV 6)
-set fmri(custom6) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_outcome_computer_neutral.txt"
+set fmri(custom6) "EVDIR/_outcome_computer_neutral.txt"
 
 # Orthogonalise EV 6 wrt EV 0
 set fmri(ortho6.0) 0
@@ -758,7 +758,7 @@ set fmri(tempfilt_yn7) 0
 set fmri(deriv_yn7) 0
 
 # Custom EV file (EV 7)
-set fmri(custom7) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_outcome_computer_reward.txt"
+set fmri(custom7) "EVDIR/_outcome_computer_reward.txt"
 
 # Orthogonalise EV 7 wrt EV 0
 set fmri(ortho7.0) 0
@@ -832,7 +832,7 @@ set fmri(tempfilt_yn8) 0
 set fmri(deriv_yn8) 0
 
 # Custom EV file (EV 8)
-set fmri(custom8) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_outcome_stranger_punish.txt"
+set fmri(custom8) "EVDIR/_outcome_stranger_punish.txt"
 
 # Orthogonalise EV 8 wrt EV 0
 set fmri(ortho8.0) 0
@@ -906,7 +906,7 @@ set fmri(tempfilt_yn9) 0
 set fmri(deriv_yn9) 0
 
 # Custom EV file (EV 9)
-set fmri(custom9) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_outcome_stranger_neutral.txt"
+set fmri(custom9) "EVDIR/_outcome_stranger_neutral.txt"
 
 # Orthogonalise EV 9 wrt EV 0
 set fmri(ortho9.0) 0
@@ -980,7 +980,7 @@ set fmri(tempfilt_yn10) 0
 set fmri(deriv_yn10) 0
 
 # Custom EV file (EV 10)
-set fmri(custom10) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_outcome_stranger_reward.txt"
+set fmri(custom10) "EVDIR/_outcome_stranger_reward.txt"
 
 # Orthogonalise EV 10 wrt EV 0
 set fmri(ortho10.0) 0
@@ -1054,7 +1054,7 @@ set fmri(tempfilt_yn11) 0
 set fmri(deriv_yn11) 0
 
 # Custom EV file (EV 11)
-set fmri(custom11) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_miss_decision.txt"
+set fmri(custom11) "EVDIR/_miss_decision.txt"
 
 # Orthogonalise EV 11 wrt EV 0
 set fmri(ortho11.0) 0
@@ -1128,7 +1128,7 @@ set fmri(tempfilt_yn12) 0
 set fmri(deriv_yn12) 0
 
 # Custom EV file (EV 12)
-set fmri(custom12) "/home/strange/Projects/rf1-sequence-pilot/derivatives/fsl/EVFiles/sub-10026/SharedReward/acq-mb6me1/_miss_outcome.txt"
+set fmri(custom12) "EVDIR/_miss_outcome.txt"
 
 # Orthogonalise EV 12 wrt EV 0
 set fmri(ortho12.0) 0
