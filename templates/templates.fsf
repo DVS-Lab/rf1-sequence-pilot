@@ -24,7 +24,7 @@ set fmri(relative_yn) 0
 set fmri(help_yn) 1
 
 # Run Featwatcher
-set fmri(featwatcher_yn) 1
+set fmri(featwatcher_yn) 0
 
 # Cleanup first-level standard-space images
 set fmri(sscleanup_yn) 0
@@ -1031,7 +1031,7 @@ set fmri(evtitle11) "Miss_dec"
 # 3 : Custom (3 column format)
 # 4 : Interaction
 # 10 : Empty (all zeros)
-set fmri(shape11) 3
+set fmri(shape11) SHAPE_MISSED_DEC
 
 # Convolution (EV 11)
 # 0 : None
@@ -1105,7 +1105,7 @@ set fmri(evtitle12) "Miss_FB"
 # 3 : Custom (3 column format)
 # 4 : Interaction
 # 10 : Empty (all zeros)
-set fmri(shape12) 3
+set fmri(shape12) SHAPE_MISSED_OUTCOME
 
 # Convolution (EV 12)
 # 0 : None

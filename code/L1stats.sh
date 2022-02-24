@@ -36,30 +36,18 @@ fi
 EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/${TASK}/acq-${acq} #
 
 # empty EVs (specific to this study)
-EV_MISSED_TRIAL=${EVDIR}_missed_trial.txt
-if [ -e $EV_MISSED_TRIAL ]; then
-	SHAPE_MISSED_TRIAL=3
+EV_MISSED_DEC=${EVDIR}/_miss_decision.txt
+if [ -e $EV_MISSED_DEC ]; then
+	SHAPE_MISSED_DEC=3
 else
 	SHAPE_MISSED_TRIAL=10
-fi
-EV_COMPN=${EVDIR}_event_computer_neutral.txt
-if [ -e $EV_COMPN ]; then
-	SHAPE_COMPN=3
+EV_MISSED_OUTCOME=${EVDIR}/_miss_outcome.txt
+if [ -e $EV_MISSED_OUTCOME ]; then
+	SHAPE_MISSED_OUTCOME=3
 else
-	SHAPE_COMPN=10
+	SHAPE_MISSED_OUTCOME=10
 fi
-EV_STRANGERN=${EVDIR}_event_stranger_neutral.txt
-if [ -e $EV_STRANGERN ]; then
-	SHAPE_STRANGERN=3
-else
-	SHAPE_STRANGERN=10
-fi
-EV_FRIENDN=${EVDIR}_event_friend_neutral.txt
-if [ -e $EV_FRIENDN ]; then
-	SHAPE_FRIENDN=3
-else
-	SHAPE_FRIENDN=10
-fi
+
 
 # if network (ecn or dmn), do nppi; otherwise, do activation or seed-based ppi
 if [ "$ppi" == "ecn" -o  "$ppi" == "dmn" ]; then
@@ -103,14 +91,8 @@ if [ "$ppi" == "ecn" -o  "$ppi" == "dmn" ]; then
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@DATA@'$DATA'@g' \
 	-e 's@EVDIR@'$EVDIR'@g' \
-	-e 's@EV_MISSED_TRIAL@'$EV_MISSED_TRIAL'@g' \
-	-e 's@SHAPE_MISSED_TRIAL@'$SHAPE_MISSED_TRIAL'@g' \
-	-e 's@EV_FRIENDN@'$EV_FRIENDN'@g' \
-	-e 's@SHAPE_FRIENDN@'$SHAPE_FRIENDN'@g' \
-	-e 's@EV_COMPN@'$EV_COMPN'@g' \
-	-e 's@SHAPE_COMPN@'$SHAPE_COMPN'@g' \
-	-e 's@EV_STRANGERN@'$EV_STRANGERN'@g' \
-	-e 's@SHAPE_STRANGERN@'$SHAPE_STRANGERN'@g' \
+	-e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
+        -e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
 	-e 's@MAINNET@'$MAINNET'@g' \
 	-e 's@OTHERNET@'$OTHERNET'@g' \
@@ -153,14 +135,8 @@ else # otherwise, do activation and seed-based ppi
 		sed -e 's@OUTPUT@'$OUTPUT'@g' \
 		-e 's@DATA@'$DATA'@g' \
 		-e 's@EVDIR@'$EVDIR'@g' \
-		-e 's@EV_MISSED_TRIAL@'$EV_MISSED_TRIAL'@g' \
-		-e 's@SHAPE_MISSED_TRIAL@'$SHAPE_MISSED_TRIAL'@g' \
-		-e 's@EV_FRIENDN@'$EV_FRIENDN'@g' \
-		-e 's@SHAPE_FRIENDN@'$SHAPE_FRIENDN'@g' \
-		-e 's@EV_COMPN@'$EV_COMPN'@g' \
-		-e 's@SHAPE_COMPN@'$SHAPE_COMPN'@g' \
-		-e 's@EV_STRANGERN@'$EV_STRANGERN'@g' \
-		-e 's@SHAPE_STRANGERN@'$SHAPE_STRANGERN'@g' \
+	        -e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
+                -e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 		-e 's@SMOOTH@'$sm'@g' \
 		-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
 		-e 's@NVOLUMES@'$NVOLUMES'@g' \
@@ -173,14 +149,8 @@ else # otherwise, do activation and seed-based ppi
 		sed -e 's@OUTPUT@'$OUTPUT'@g' \
 		-e 's@DATA@'$DATA'@g' \
 		-e 's@EVDIR@'$EVDIR'@g' \
-		-e 's@EV_MISSED_TRIAL@'$EV_MISSED_TRIAL'@g' \
-		-e 's@SHAPE_MISSED_TRIAL@'$SHAPE_MISSED_TRIAL'@g' \
-		-e 's@EV_FRIENDN@'$EV_FRIENDN'@g' \
-		-e 's@SHAPE_FRIENDN@'$SHAPE_FRIENDN'@g' \
-		-e 's@EV_COMPN@'$EV_COMPN'@g' \
-		-e 's@SHAPE_COMPN@'$SHAPE_COMPN'@g' \
-		-e 's@EV_STRANGERN@'$EV_STRANGERN'@g' \
-		-e 's@SHAPE_STRANGERN@'$SHAPE_STRANGERN'@g' \
+	        -e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
+                -e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 		-e 's@PHYS@'$PHYS'@g' \
 		-e 's@SMOOTH@'$sm'@g' \
 		-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
