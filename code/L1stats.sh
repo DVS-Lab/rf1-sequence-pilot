@@ -38,14 +38,14 @@ if [ ! -e $CONFOUNDEVS ]; then
 	exit # exiting to ensure nothing gets run without confounds
 fi
 
-EVDIR=${maindir}/derivatives/fsl/EVfiles/sub-${sub}/${TASK}/acq-${acq} #
+EVDIR=${maindir}/derivatives/fsl/EVFiles/sub-${sub}/${TASK}/acq-${acq} #
 
 # empty EVs (specific to this study)
 EV_MISSED_DEC=${EVDIR}/_miss_decision.txt
 if [ -e $EV_MISSED_DEC ]; then
 	SHAPE_MISSED_DEC=3
 else
-	SHAPE_MISSED_TRIAL=10
+	SHAPE_MISSED_DEC=10
 fi
 
 EV_MISSED_OUTCOME=${EVDIR}/_miss_outcome.txt
@@ -139,17 +139,18 @@ else # otherwise, do activation and seed-based ppi
 	ITEMPLATE=${maindir}/templates/L1_task-${TASK}_model-1_type-${TYPE}.fsf
 	OTEMPLATE=${MAINOUTPUT}/L1_sub-${sub}_task-${TASK}_model-1_seed-${ppi}_acq-${acq}_type-act.fsf
 	if [ "$ppi" == "0" ]; then
-
-		sed -e 's@OUTPUT@'$OUTPUT'@g' \
+                echo $OUTPUT
+                sed -e 's@OUTPUT@'$OUTPUT'@g' \
 		-e 's@DATA@'$DATA'@g' \
 		-e 's@EVDIR@'$EVDIR'@g' \
-	        -e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
-                -e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 		-e 's@SMOOTH@'$sm'@g' \
 		-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
 		-e 's@NVOLUMES@'$NVOLUMES'@g' \
-                -e 's@TRINFO@'$TRINFO'@g' \
+                -e 's@TRINFO@'"${TRINFO}"'@g' \
+                -e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
+                -e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 		<$ITEMPLATE> $OTEMPLATE
+		
 	else
 		PHYS=${MAINOUTPUT}/ts_task-${TASK}_mask-${ppi}_acq-${acq}.txt
 		MASK=${maindir}/masks/seed-${ppi}.nii.gz
@@ -157,8 +158,8 @@ else # otherwise, do activation and seed-based ppi
 		sed -e 's@OUTPUT@'$OUTPUT'@g' \
 		-e 's@DATA@'$DATA'@g' \
 		-e 's@EVDIR@'$EVDIR'@g' \
-	        -e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
-                -e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
+	        -e 's@SHAPE_MISSED_DEC@'"$SHAPE_MISSED_DEC"'@g' \
+                -e 's@SHAPE_MISSED_OUTCOME@'"$SHAPE_MISSED_OUTCOME"'@g' \
 		-e 's@PHYS@'$PHYS'@g' \
 		-e 's@SMOOTH@'$sm'@g' \
 		-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
@@ -167,6 +168,7 @@ else # otherwise, do activation and seed-based ppi
 		<$ITEMPLATE> $OTEMPLATE
 	fi
 	feat $OTEMPLATE
+        #cat $OTEMPLATE
 fi
 
 # fix registration as per NeuroStars post:
