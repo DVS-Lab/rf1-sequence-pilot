@@ -1053,6 +1053,9 @@ set fmri(tempfilt_yn11) 0
 # Add temporal derivative (EV 11)
 set fmri(deriv_yn11) 0
 
+# Custom EV file (EV 11)
+set fmri(custom11) "EVDIR/_miss_decision.txt"
+
 # Orthogonalise EV 11 wrt EV 0
 set fmri(ortho11.0) 0
 
@@ -1123,6 +1126,9 @@ set fmri(tempfilt_yn12) 0
 
 # Add temporal derivative (EV 12)
 set fmri(deriv_yn12) 0
+
+# Custom EV file (EV 12)
+set fmri(custom12) "EVDIR/_miss_outcome.txt"
 
 # Orthogonalise EV 12 wrt EV 0
 set fmri(ortho12.0) 0

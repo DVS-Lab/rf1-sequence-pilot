@@ -134,7 +134,7 @@ else # otherwise, do activation and seed-based ppi
 		echo "missing feat output: $OUTPUT " >> ${maindir}/re-runL1.log
 		rm -rf ${OUTPUT}.feat
 	fi
-
+        echo "made it hear"
 	# create template and run analyses
 	ITEMPLATE=${maindir}/templates/L1_task-${TASK}_model-1_type-${TYPE}.fsf
 	OTEMPLATE=${MAINOUTPUT}/L1_sub-${sub}_task-${TASK}_model-1_seed-${ppi}_acq-${acq}_type-act.fsf
