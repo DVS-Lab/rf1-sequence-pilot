@@ -28,7 +28,7 @@ singularity run --cleanenv \
 -B /data/tools/licenses:/opts \
 -B $scratchdir:/scratch \
 /data/tools/fmriprep-21.0.1.simg \
-/base/bids /base/derivatives \
+/base/bids /base/derivatives/fmriprep \
 participant --participant_label $sub \
 --stop-on-first-crash \
 --fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch
