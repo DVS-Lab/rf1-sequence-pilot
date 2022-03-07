@@ -3,6 +3,8 @@ function out = convertSharedReward2BIDSevents(subj,counterbalance)
 % the BIDS *_events.tsv file format. It also collects summary information
 % about the subject's data in the "out" variable.
 
+%Example convertSharedReward2BIDSevents(10007,1)
+
 %{
 
 run-1	run-2	run-3	run-4	run-5	run-6	counterbalance
