@@ -7,7 +7,6 @@ sub=$1
 
 # ensure paths are correct irrespective from where user runs the script
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-scriptdir="$(dirname "$scriptdir")"
 maindir="$(dirname "$scriptdir")"
 
 # make derivatives folder if it doesn't exist.
@@ -28,8 +27,9 @@ singularity run --cleanenv \
 -B $maindir:/base \
 -B /data/tools/licenses:/opts \
 -B $scratchdir:/scratch \
-/data/tools/fmriprep-20.2.6.simg \
-/base/bids /base/derivatives \
+/data/tools/fmriprep-21.0.1.simg \
+/base/bids /base/derivatives/fmriprep \
 participant --participant_label $sub \
 --stop-on-first-crash \
+--me-output-echos \
 --fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch

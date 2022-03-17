@@ -31,8 +31,8 @@ for f in cons:
 
     # parse key-value pairs and build variables
     sub=re.search('/func/(.*)_task', f).group(1)
-    run=re.search('_run-(.*)_desc', f).group(1)
-    task=re.search('_task-(.*)_run',f).group(1)
+    acq=re.search('_acq-(.*)_', f).group(1)
+    task=re.search('_task-(.*)_acq',f).group(1)
     derivatives_path=re.search('(.*)fmriprep/sub',f).group(1)
 
     #read in confound file and build matrix
@@ -52,10 +52,10 @@ for f in cons:
     df_all.fillna(0, inplace=True)
 
     # generate output files
-    outfile="%s_task-%s_run-%s_desc-fslConfounds.tsv"%(sub,task,run)
+    outfile="%s_task-%s_acq-%s_desc-fslConfounds.tsv"%(sub,task,acq)
     outdir=derivatives_path+"fsl/confounds/%s/" %(sub)
     if not os.path.exists(outdir):
     	os.makedirs(outdir)
     output=outdir+outfile
-    print(sub,run,task)
+    print(sub,acq,task)
     df_all.to_csv(output,index=False,sep='\t',header=False)

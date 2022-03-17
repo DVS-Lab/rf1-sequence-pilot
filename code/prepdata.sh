@@ -40,12 +40,12 @@ singularity run --cleanenv \
 /data/tools/heudiconv-0.9.0.simg \
 -d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 -s $sub \
--f /out/code/prep_data/heuristics.py \
+-f /out/code/heuristics.py \
 -c dcm2niix -b --minmeta -o /out/bids --overwrite
 
 # run Jeff's code to fix field map, but first correct permissions
-chmod -R uga+rw $dsroot/bids/sub-$sub
-# python $codedir/addIntendedFor.py
+#chmod -R uga+rw $dsroot/bids/sub-$sub
+#python $codedir/addIntendedFor.py
 
 
 #
@@ -65,27 +65,27 @@ python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv
 #
 ## make derivatives folder if it doesn't exist.
 ## let's keep this out of bids for now
-if [ ! -d $dsroot/derivatives/mriqc ]; then
-	mkdir -p $dsroot/derivatives/mriqc
-fi
+#if [ ! -d $dsroot/derivatives/mriqc ]; then
+#	mkdir -p $dsroot/derivatives/mriqc
+#fi
 #
 #
 ## make scratch
-scratch=/data/scratch/`whoami`
-if [ ! -d $scratch ]; then
-	mkdir -p $scratch
-fi
+#scratch=/data/scratch/`whoami`
+#if [ ! -d $scratch ]; then
+#	mkdir -p $scratch
+#fi
 #
 ## no space left on device error for v0.15.2 and higher
 ## https://neurostars.org/t/mriqc-no-space-left-on-device-error/16187/1
 ## https://github.com/poldracklab/mriqc/issues/850
-TEMPLATEFLOW_DIR=/data/tools/templateflow
-export SINGULARITYENV_TEMPLATEFLOW_HOME=/opt/templateflow
-singularity run --cleanenv \
--B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
--B $dsroot/bids:/data \
--B $dsroot/derivatives/mriqc:/out \
--B $scratch:/scratch \
-/data/tools/mriqc-0.16.1.simg \
-/data /out \
-participant --participant_label $sub -w /scratch
+#TEMPLATEFLOW_DIR=/data/tools/templateflow
+#export SINGULARITYENV_TEMPLATEFLOW_HOME=/opt/templateflow
+#singularity run --cleanenv \
+#-B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
+#-B $dsroot/bids:/data \
+#-B $dsroot/derivatives/mriqc:/out \
+#-B $scratch:/scratch \
+#/data/tools/mriqc-0.16.1.simg \
+#/data /out \
+#participant --participant_label $sub -w /scratch
