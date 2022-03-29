@@ -106,6 +106,7 @@ TEMPLATEFLOW_DIR=/data/tools/templateflow
 export SINGULARITYENV_TEMPLATEFLOW_HOME=/opt/templateflow
 if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
  echo "running mriqc for sub-${sub}"
+
 	
 	singularity run --cleanenv \
 	-B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
@@ -113,6 +114,7 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 	-B $dsroot/derivatives/mriqc:/out \
 	-B $scratch:/scratch \
 	/data/tools/mriqc-0.16.1.simg \
+	/data /out group
 
 fi
 /data /out \
