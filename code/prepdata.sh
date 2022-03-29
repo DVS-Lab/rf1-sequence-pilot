@@ -47,14 +47,22 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 
  echo "making bids for sub-${sub}"
 
-	singularity run --cleanenv \
-	-B $dsroot:/out \
-	-B $sourcedata:/sourcedata \
-	/data/tools/heudiconv-0.9.0.simg \
+	#singularity run --cleanenv \
+	#-B $dsroot:/out \
+	#-B $sourcedata:/sourcedata \
+	#/data/tools/heudiconv-0.9.0.simg \
+	#-d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
+	#-s $sub \
+	#-f /out/code/heuristics.py \
+	#-c dcm2niix -b --minmeta -o /out/bids --overwrite
+
+	docker run --rm -it -v ${dsroot}:/out -v ${sourcedata}:/sourcedata nipy/heudiconv:custom \
 	-d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
+	-o /out/bids/ \
+	-f /out/code/heuristic.py \
 	-s $sub \
-	-f /out/code/heuristics.py \
-	-c dcm2niix -b --minmeta -o /out/bids --overwrite
+	-c dcm2niix \
+	-b --minmeta --overwrite
 
 fi
 
