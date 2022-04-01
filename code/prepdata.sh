@@ -56,12 +56,12 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 	#-f /out/code/heuristics.py \
 	#-c dcm2niix -b --minmeta -o /out/bids --overwrite
 
-	heudiconv -d /${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
+	heudiconv -d ${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 	-o ${dsroot}/bids/ \
 	-f ${dsroot}/code/heuristics.py \
 	-s $sub \
 	-c dcm2niix \
-	-b --minmeta --overwrite
+	--minmeta --overwrite
 
 fi
 

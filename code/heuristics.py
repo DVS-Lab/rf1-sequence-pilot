@@ -56,27 +56,27 @@ def infotodict(seqinfo):
             info[phase].append(s.series_id)
 
         # no multi-echo
-        if (s.dim4 >= 150) and ('MB1_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
+        if (s.dim4 >= 100) and ('MB1_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
             info[mb1me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
-        if (s.dim4 >= 150) and ('MB3_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
+        if (s.dim4 >= 100) and ('MB3_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
             info[mb3me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb3me1_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 >= 150) and ('MB6_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
+        if (s.dim4 >= 100) and ('MB6_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
             info[mb6me1].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb6me1_sbref].append(list_of_ids[idx -1])
 
         # multi-echo standard
-        if (s.dim4 >= 150) and ('MB1_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
+        if (s.dim4 >= 100) and ('MB1_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
             info[mb1me4].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
-        if (s.dim4 >= 150) and ('MB3_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
+        if (s.dim4 >= 100) and ('MB3_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
             info[mb3me4].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb3me4_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 >= 150) and ('MB6_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
+        if (s.dim4 >= 100) and ('MB6_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
             info[mb6me4].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
             info[mb6me4_sbref].append(list_of_ids[idx -1])
