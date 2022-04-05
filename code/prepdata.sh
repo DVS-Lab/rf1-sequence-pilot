@@ -61,7 +61,7 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 	-f ${dsroot}/code/heuristics.py \
 	-s $sub \
 	-c dcm2niix \
-	--minmeta --overwrite
+	-b --minmeta --overwrite
 
 fi
 
