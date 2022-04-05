@@ -6,7 +6,7 @@ acq=$2
 tedana_dir=/data/projects/rf1-sequence-pilot/derivatives/tedana
 fmriprep_dir=/data/projects/rf1-sequence-pilot/derivatives/fmriprep
 
-vol_to_warp=${tedana_dir}/sub-${sub}/
+vol_to_warp=${tedana_dir}/sub-${sub}/sub-${sub}_task-${task}_acq-${acq}_desc-optcom_bold.nii.gz
 
 MNI_reference=${fmriprep_dir}/mni152.nii.gz
 

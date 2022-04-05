@@ -210,3 +210,1652 @@ INFO     tedana:tedana_workflow:552 Computing EPI mask from first echo
 INFO     tedana:tedana_workflow:584 Computing T2* map
 INFO     tedana:tedana_workflow:552 Computing EPI mask from first echo
 INFO     tedana:tedana_workflow:584 Computing T2* map
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     pca:tedpca:312 Selected 17 components with kic dimensionality detection
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     pca:tedpca:312 Selected 26 components with kic dimensionality detection
+INFO     ica:tedica:83 ICA with random seed 42 converged in 55 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     ica:tedica:83 ICA with random seed 42 converged in 74 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+WARNING  tedica:kundu_selection_v2:287 Too few BOLD-like components detected. Ignoring all remaining.
+WARNING  tedana:tedana_workflow:674 No BOLD components found. Re-attempting ICA.
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     ica:tedica:83 ICA with random seed 43 converged in 60 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     pca:tedpca:312 Selected 20 components with kic dimensionality detection
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     ica:tedica:83 ICA with random seed 42 converged in 52 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     pca:tedpca:312 Selected 28 components with kic dimensionality detection
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+WARNING  tedica:kundu_selection_v2:287 Too few BOLD-like components detected. Ignoring all remaining.
+WARNING  tedana:tedana_workflow:674 No BOLD components found. Re-attempting ICA.
+INFO     ica:tedica:83 ICA with random seed 44 converged in 70 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     ica:tedica:83 ICA with random seed 42 converged in 70 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     io:denoise_ts:374 Variance explained by decomposition: 54.64%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 87.43%
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_desc-optcomAccepted_bold.nii.gz
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_desc-optcomAccepted_bold.nii.gz
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_desc-optcomRejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_desc-optcomRejected_bold.nii.gz
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_desc-optcomDenoised_bold.nii.gz
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_desc-ICAAccepted_components.nii.gz
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 66.81%
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 39.67%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_desc-optcomDenoised_bold.nii.gz
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_desc-ICA_components.nii.gz
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_desc-ICAAccepted_components.nii.gz
+INFO     pca:tedpca:312 Selected 20 components with kic dimensionality detection
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 71.89%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_desc-optcomRejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 40.15%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_desc-ICAAccepted_components.nii.gz
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 44.99%
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 76.37%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 38.50%
+INFO     ica:tedica:83 ICA with random seed 42 converged in 55 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 49.28%
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 78.28%
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 37.05%
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 52.20%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 78.72%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb1me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     tedana:tedana_workflow:861 Making figures folder with static component maps and timecourse plots.
+INFO     io:denoise_ts:374 Variance explained by decomposition: 54.64%
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 83.50%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 53.12%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb1me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     tedana:tedana_workflow:861 Making figures folder with static component maps and timecourse plots.
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 87.43%
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb1me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     tedana:tedana_workflow:861 Making figures folder with static component maps and timecourse plots.
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 66.81%
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:denoise_ts:374 Variance explained by decomposition: 58.86%
+INFO     pca:tedpca:312 Selected 23 components with kic dimensionality detection
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_desc-optcomRejected_bold.nii.gz
+INFO     tedana:tedana_workflow:890 Generating dynamic report
+INFO     tedana:tedana_workflow:893 Workflow completed
+INFO     tedana:tedana_workflow:454 Using output directory: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017
+INFO     tedana:tedana_workflow:467 Loading input data: ['/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb6me4_echo-1_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb6me4_echo-2_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb6me4_echo-3_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb6me4_echo-4_desc-preproc_bold.nii.gz']
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_desc-ICAAccepted_components.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_desc-optcomRejected_bold.nii.gz
+INFO     ica:tedica:83 ICA with random seed 42 converged in 89 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     tedana:tedana_workflow:890 Generating dynamic report
+INFO     tedana:tedana_workflow:893 Workflow completed
+INFO     tedana:tedana_workflow:890 Generating dynamic report
+INFO     tedana:tedana_workflow:893 Workflow completed
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     tedana:tedana_workflow:454 Using output directory: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035
+INFO     tedana:tedana_workflow:467 Loading input data: ['/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10035/func/sub-10035_task-sharedreward_acq-mb6me4_echo-1_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10035/func/sub-10035_task-sharedreward_acq-mb6me4_echo-2_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10035/func/sub-10035_task-sharedreward_acq-mb6me4_echo-3_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10035/func/sub-10035_task-sharedreward_acq-mb6me4_echo-4_desc-preproc_bold.nii.gz']
+INFO     tedana:tedana_workflow:454 Using output directory: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024
+INFO     tedana:tedana_workflow:467 Loading input data: ['/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10024/func/sub-10024_task-sharedreward_acq-mb1me4_echo-1_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10024/func/sub-10024_task-sharedreward_acq-mb1me4_echo-2_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10024/func/sub-10024_task-sharedreward_acq-mb1me4_echo-3_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10024/func/sub-10024_task-sharedreward_acq-mb1me4_echo-4_desc-preproc_bold.nii.gz']
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 57.97%
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_desc-optcomDenoised_bold.nii.gz
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_desc-ICAAccepted_components.nii.gz
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     tedana:tedana_workflow:552 Computing EPI mask from first echo
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     tedana:tedana_workflow:584 Computing T2* map
+INFO     io:denoise_ts:374 Variance explained by decomposition: 33.15%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     io:denoise_ts:374 Variance explained by decomposition: 66.63%
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 37.01%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 62.32%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_desc-optcomAccepted_bold.nii.gz
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_desc-optcomRejected_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 70.69%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 40.32%
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_desc-ICAAccepted_components.nii.gz
+INFO     tedana:tedana_workflow:552 Computing EPI mask from first echo
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     tedana:tedana_workflow:584 Computing T2* map
+INFO     io:denoise_ts:374 Variance explained by decomposition: 32.61%
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 72.42%
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     tedana:tedana_workflow:552 Computing EPI mask from first echo
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     tedana:tedana_workflow:584 Computing T2* map
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 39.48%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 42.08%
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb3me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     tedana:tedana_workflow:454 Using output directory: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017
+INFO     tedana:tedana_workflow:454 Using output directory: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017
+INFO     tedana:tedana_workflow:467 Loading input data: ['/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-preproc_bold.nii.gz']
+INFO     tedana:tedana_workflow:467 Loading input data: ['/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-preproc_bold.nii.gz', '/data/projects/rf1-sequence-pilot/derivatives/fmriprep/sub-10017/func/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-preproc_bold.nii.gz']
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb3me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     tedana:tedana_workflow:861 Making figures folder with static component maps and timecourse plots.
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 58.86%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 43.45%
+INFO     pca:tedpca:312 Selected 25 components with kic dimensionality detection
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     tedana:tedana_workflow:890 Generating dynamic report
+INFO     tedana:tedana_workflow:893 Workflow completed
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     ica:tedica:83 ICA with random seed 42 converged in 47 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 45.26%
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb3me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     tedana:tedana_workflow:861 Making figures folder with static component maps and timecourse plots.
+INFO     pca:tedpca:312 Selected 20 components with kic dimensionality detection
+INFO     io:denoise_ts:374 Variance explained by decomposition: 62.32%
+INFO     tedana:tedana_workflow:552 Computing EPI mask from first echo
+INFO     tedana:tedana_workflow:552 Computing EPI mask from first echo
+INFO     tedana:tedana_workflow:584 Computing T2* map
+INFO     tedana:tedana_workflow:584 Computing T2* map
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     ica:tedica:83 ICA with random seed 42 converged in 30 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     io:denoise_ts:374 Variance explained by decomposition: 45.89%
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_desc-optcomAccepted_bold.nii.gz
+INFO     tedana:tedana_workflow:890 Generating dynamic report
+INFO     tedana:tedana_workflow:893 Workflow completed
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_desc-optcomRejected_bold.nii.gz
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_desc-ICAAccepted_components.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 47.14%
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 17.33%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_desc-optcomRejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_desc-ICAAccepted_components.nii.gz
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 21.48%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 26.11%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 27.77%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 31.23%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 30.71%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 34.13%
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:denoise_ts:374 Variance explained by decomposition: 32.82%
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     pca:tedpca:312 Selected 21 components with kic dimensionality detection
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb6me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     ica:tedica:83 ICA with random seed 42 converged in 43 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/sub-10041_task-sharedreward_acq-mb6me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:denoise_ts:374 Variance explained by decomposition: 74.71%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_desc-optcomRejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_desc-ICAAccepted_components.nii.gz
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 54.00%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 58.37%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 60.20%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 60.67%
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10024/sub-10024_task-sharedreward_acq-mb1me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     pca:tedpca:312 Selected 19 components with kic dimensionality detection
+INFO     ica:tedica:83 ICA with random seed 42 converged in 32 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:denoise_ts:374 Variance explained by decomposition: 45.73%
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_desc-optcomAccepted_bold.nii.gz
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_desc-optcomRejected_bold.nii.gz
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     combine:make_optcom:242 Optimally combining data with voxel-wise T2* estimates
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_desc-optcomDenoised_bold.nii.gz
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_desc-ICAAccepted_components.nii.gz
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 21.47%
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcom_bold.nii.gz
+INFO     tedana:tedana_workflow:609 Writing optimally combined data set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcom_bold.nii.gz
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     pca:tedpca:227 Computing PCA of optimally combined multi-echo data
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     pca:tedpca:312 Selected 17 components with kic dimensionality detection
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     pca:tedpca:312 Selected 20 components with kic dimensionality detection
+INFO     pca:tedpca:312 Selected 20 components with kic dimensionality detection
+INFO     io:denoise_ts:374 Variance explained by decomposition: 28.48%
+INFO     ica:tedica:83 ICA with random seed 42 converged in 38 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     ica:tedica:83 ICA with random seed 42 converged in 74 iterations
+INFO     ica:tedica:83 ICA with random seed 42 converged in 74 iterations
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     tedana:tedana_workflow:646 Making second component selection guess from ICA results
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:123 Calculating weight maps
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:132 Calculating parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:145 Calculating z-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:155 Calculating F-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:165 Thresholding z-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:172 Calculating T2* F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:179 Calculating S0 F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:187 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:193 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:200 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:206 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:213 Calculating kappa and rho
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:222 Calculating variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:228 Calculating normalized variance explained
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:235 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:246 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+/opt/anaconda3/lib/python3.8/site-packages/tedana/utils.py:211: RuntimeWarning: invalid value encountered in true_divide
+  dsi = (2.0 * intersection.sum(axis=axis)) / arr_sum
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:257 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:295 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     collect:generate_metrics:306 Calculating decision table score
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:denoise_ts:374 Variance explained by decomposition: 49.83%
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     tedica:kundu_selection_v2:138 Performing ICA component selection with Kundu decision tree v2.5
+INFO     io:denoise_ts:374 Variance explained by decomposition: 57.76%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 57.76%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 31.90%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_desc-optcomAccepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcomRejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcomRejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_desc-optcomRejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-ICAAccepted_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-ICAAccepted_components.nii.gz
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 36.13%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 36.13%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_desc-optcomDenoised_bold.nii.gz
+INFO     io:writeresults:498 Writing full ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_desc-ICA_components.nii.gz
+INFO     io:writeresults:502 Writing denoised ICA coefficient feature set: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_desc-ICAAccepted_components.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 33.31%
+INFO     io:writeresults:508 Writing Z-normalized spatial component maps: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_desc-ICAAccepted_stat-z_components.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #1 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 28.93%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 39.38%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 39.38%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-1_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-1_desc-Rejected_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 37.96%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 37.96%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10035/sub-10035_task-sharedreward_acq-mb6me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-1_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #2 timeseries
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 33.04%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 35.47%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 35.47%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-2_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb3me4_echo-4_desc-Denoised_bold.nii.gz
+INFO     tedana:tedana_workflow:861 Making figures folder with static component maps and timecourse plots.
+INFO     tedana:tedana_workflow:861 Making figures folder with static component maps and timecourse plots.
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-2_desc-Rejected_bold.nii.gz
+INFO     io:denoise_ts:374 Variance explained by decomposition: 57.76%
+INFO     io:denoise_ts:374 Variance explained by decomposition: 57.76%
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-2_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #3 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 31.80%
+INFO     tedana:tedana_workflow:890 Generating dynamic report
+INFO     tedana:tedana_workflow:890 Generating dynamic report
+INFO     tedana:tedana_workflow:893 Workflow completed
+INFO     tedana:tedana_workflow:893 Workflow completed
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-3_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-3_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-3_desc-Denoised_bold.nii.gz
+INFO     io:writeresults_echoes:551 Writing Kappa-filtered echo #4 timeseries
+INFO     io:denoise_ts:374 Variance explained by decomposition: 28.66%
+INFO     io:write_split_ts:432 Writing high-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-4_desc-Accepted_bold.nii.gz
+INFO     io:write_split_ts:439 Writing low-Kappa time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-4_desc-Rejected_bold.nii.gz
+INFO     io:write_split_ts:446 Writing denoised time series: /data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10017/sub-10017_task-sharedreward_acq-mb6me4_echo-4_desc-Denoised_bold.nii.gz
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 51, in starmapstar
+    return list(itertools.starmap(args[0], args[1]))
+  File "my_tedana.py", line 98, in RUN_Tedana
+    workflows.tedana_workflow(
+  File "/opt/anaconda3/lib/python3.8/site-packages/tedana/workflows/tedana.py", line 853, in tedana_workflow
+    with open(refname, "r") as fo:
+FileNotFoundError: [Errno 2] No such file or directory: '/data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/_references.txt'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "my_tedana.py", line 111, in <module>
+    results = pool.starmap(RUN_Tedana, args)
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 372, in starmap
+    return self._map_async(func, iterable, starmapstar, chunksize).get()
+  File "/opt/anaconda3/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+FileNotFoundError: [Errno 2] No such file or directory: '/data/projects/rf1-sequence-pilot/derivatives/tedana/sub-10041/_references.txt'
+sub-10035
+
+sub-10024
+
+sub-10041
+
+Tedana was previously run for Sub sub-10041 remove directory if they need to be reanalyzed
+sub-10024
+
+Tedana was previously run for Sub sub-10024 remove directory if they need to be reanalyzed
+sub-10035
+
+Tedana was previously run for Sub sub-10035 remove directory if they need to be reanalyzed
+sub-10024
+
+Tedana was previously run for Sub sub-10024 remove directory if they need to be reanalyzed
+sub-10041
+
+sub-10035
+
+Tedana was previously run for Sub sub-10035 remove directory if they need to be reanalyzed
+sub-10041
+
+Tedana was previously run for Sub sub-10041 remove directory if they need to be reanalyzed
+sub-10017
+
+Tedana was previously run for Sub sub-10017 remove directory if they need to be reanalyzed
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 1 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb1me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 1 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb1me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 3 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb3me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 3 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb3me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 6 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb6me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 6 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb6me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 1 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb1me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 1 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb1me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 3 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb3me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 3 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb3me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 6 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb6me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10017 6 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10017/L1_task-sharedreward_model-1_type-act_acq-mb6me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10024 1 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10024/L1_task-sharedreward_model-1_type-act_acq-mb1me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10024 1 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10024/L1_task-sharedreward_model-1_type-act_acq-mb1me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10024 3 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10024/L1_task-sharedreward_model-1_type-act_acq-mb3me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10024 3 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10024/L1_task-sharedreward_model-1_type-act_acq-mb3me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10024 6 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10024/L1_task-sharedreward_model-1_type-act_acq-mb6me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10024 6 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10024/L1_task-sharedreward_model-1_type-act_acq-mb6me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10035 1 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10035/L1_task-sharedreward_model-1_type-act_acq-mb1me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10035 1 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10035/L1_task-sharedreward_model-1_type-act_acq-mb1me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10035 3 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10035/L1_task-sharedreward_model-1_type-act_acq-mb3me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10035 3 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10035/L1_task-sharedreward_model-1_type-act_acq-mb3me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10035 6 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10035/L1_task-sharedreward_model-1_type-act_acq-mb6me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10035 6 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10035/L1_task-sharedreward_model-1_type-act_acq-mb6me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10041 1 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10041/L1_task-sharedreward_model-1_type-act_acq-mb1me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10041 1 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10041/L1_task-sharedreward_model-1_type-act_acq-mb1me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10041 3 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10041/L1_task-sharedreward_model-1_type-act_acq-mb3me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10041 3 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10041/L1_task-sharedreward_model-1_type-act_acq-mb3me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10041 6 1 0
+single echo
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10041/L1_task-sharedreward_model-1_type-act_acq-mb6me1_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
+/data/projects/rf1-sequence-pilot/code/L1stats.sh 10041 6 4 0
+multiple echos
+
+made it hear
+/data/projects/rf1-sequence-pilot/derivatives/fsl/sub-10041/L1_task-sharedreward_model-1_type-act_acq-mb6me4_sm-6
+child process exited abnormally
+    while executing
+"fsl:exec "${FSLDIR}/bin/feat_model design" $fmri(featModelOpts) -N feat0_model -l logs "
+    (procedure "firstLevelMaster" line 43)
+    invoked from within
+"firstLevelMaster $session"
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.3/bin/feat" line 390)
