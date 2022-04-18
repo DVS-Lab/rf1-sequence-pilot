@@ -27,13 +27,16 @@ acq=mb${mb}me${me}
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
 mkdir -p $MAINOUTPUT
 
-if [ $me -gt 1 ];then
-echo "multiple echos"
-	DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_desc-optcom-dewarped_bold.nii.gz
-else
-echo "single echo"
-	DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
-fi
+DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
+
+#Handling different inputs for multi vs single echos
+#if [ $me -gt 1 ];then
+#echo "multiple echos"
+#	DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_desc-optcom-dewarped_bold.nii.gz
+#else
+#echo "single echo"
+#	DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
+#fi
 
 NVOLUMES=`fslnvols $DATA`
 TRINFO=`fslval $DATA pixdim4` #OUR DATA won't have all the same TR
