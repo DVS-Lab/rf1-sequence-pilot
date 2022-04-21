@@ -47,14 +47,21 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 
  echo "making bids for sub-${sub}"
 
-	singularity run --cleanenv \
-	-B $dsroot:/out \
-	-B $sourcedata:/sourcedata \
-	/data/tools/heudiconv-0.9.0.simg \
-	-d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
+	#singularity run --cleanenv \
+	#-B $dsroot:/out \
+	#-B $sourcedata:/sourcedata \
+	#/data/tools/heudiconv-0.9.0.simg \
+	#-d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
+	#-s $sub \
+	#-f /out/code/heuristics.py \
+	#-c dcm2niix -b --minmeta -o /out/bids --overwrite
+
+	heudiconv -d ${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
+	-o ${dsroot}/bids/ \
+	-f ${dsroot}/code/heuristics.py \
 	-s $sub \
-	-f /out/code/heuristics.py \
-	-c dcm2niix -b --minmeta -o /out/bids --overwrite
+	-c dcm2niix \
+	-b --minmeta --overwrite
 
 fi
 
@@ -98,6 +105,7 @@ TEMPLATEFLOW_DIR=/data/tools/templateflow
 export SINGULARITYENV_TEMPLATEFLOW_HOME=/opt/templateflow
 if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
  echo "running mriqc for sub-${sub}"
+
 	
 	singularity run --cleanenv \
 	-B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
@@ -105,6 +113,7 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 	-B $dsroot/derivatives/mriqc:/out \
 	-B $scratch:/scratch \
 	/data/tools/mriqc-0.16.1.simg \
+	/data /out group
 
 fi
 /data /out \

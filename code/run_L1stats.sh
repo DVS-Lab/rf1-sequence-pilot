@@ -13,7 +13,8 @@ for ppi in 0; do # putting 0 first will indicate "activation"
           sub=${sub#*sub-}
           sub=${sub%/}  
 
-	  for acq in mb1me1 mb1me4 mb3me1 mb3me4 mb6me1 mb6me4; do
+	  for mb in 1 3 6; do
+		for me in 1 4; do
 
 	  	# Manages the number of jobs and cores
 	  	SCRIPTNAME=${basedir}/code/L1stats.sh
@@ -21,9 +22,11 @@ for ppi in 0; do # putting 0 first will indicate "activation"
 	  	while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
 	    		sleep 5s
 	  	done
-	  	bash $SCRIPTNAME $sub $acq $ppi &
-                echo $SCRIPTNAME $sub $acq $ppi &
+	  	bash $SCRIPTNAME $sub $mb $me $ppi &
+                echo $SCRIPTNAME $sub $mb $me $ppi &
 			sleep 1s
+
+	    done
 	  done
 	done
 done

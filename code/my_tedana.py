@@ -40,6 +40,7 @@ image_prefix_list=set(image_prefix_list)
 #Make a dataframe where C1 is Sub C2 is inputFiles and C3 is Echotimes
 data=[]
 for acq in image_prefix_list:
+    print(acq)
     #Use RegEx to find Sub
     sub="sub-"+re.search('sub-(.*)_task',acq).group(1)
     
@@ -65,10 +66,11 @@ for acq in image_prefix_list:
 
     print(prep_data,out_dir)
 
-    data.append([sub,acq_image_files,echo_times,out_dir])
+    data.append([sub,acq,acq_image_files,echo_times,out_dir])
 
-InData_df=pd.DataFrame(data=data,columns=['sub','EchoFiles','EchoTimes','OutDir'])
+InData_df=pd.DataFrame(data=data,columns=['sub','acq','EchoFiles','EchoTimes','OutDir'])
 args=zip(InData_df['sub'].tolist(),
+         InData_df['acq'].tolist(),
          InData_df['EchoFiles'].tolist(),
          InData_df['EchoTimes'].tolist(),
          InData_df['OutDir'].tolist())
@@ -83,18 +85,21 @@ args=zip(InData_df['sub'].tolist(),
 #But anatomical CompCor, Go Decomposition (GODEC), and robust PCA can also be used
 
 
-def RUN_Tedana(sub,EchoFiles,EchoTimes,OutDir):
+def RUN_Tedana(sub,prefix,EchoFiles,EchoTimes,OutDir):
     
     time.sleep(2)
     print(sub+'\n')
     
     if os.path.isdir(OutDir):
         print('Tedana was previously run for Sub %s remove directory if they need to be reanalyzed'%(sub))
+    else:
+        os.makedirs(OutDir)
+
     workflows.tedana_workflow(
     EchoFiles,
     EchoTimes,
     out_dir=OutDir,
-    prefix="sub-%s_task-sharedreward_space-Native"%(sub),
+    prefix="%s"%(prefix),
     fittype="curvefit",
     tedpca="kic",
     verbose=True,

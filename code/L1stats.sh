@@ -18,27 +18,46 @@ istartdatadir=/data/projects/rf1-sequence-pilot #need to fix this upon release (
 TASK=sharedreward
 sm=6
 sub=$1
-acq=$2
-ppi=$3 # 0 for activation, otherwise seed region or network
-
+mb=$2
+me=$3
+ppi=$4 # 0 for activation, otherwise seed region or network
+acq=mb${mb}me${me}
 
 # set inputs and general outputs (should not need to chage across studies in Smith Lab)
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
 mkdir -p $MAINOUTPUT
+
 DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
+
+#Handling different inputs for multi vs single echos
+#if [ $me -gt 1 ];then
+#echo "multiple echos"
+#	DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_desc-optcom-dewarped_bold.nii.gz
+#else
+#echo "single echo"
+#	DATA=${istartdatadir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
+#fi
+
 NVOLUMES=`fslnvols $DATA`
 TRINFO=`fslval $DATA pixdim4` #OUR DATA won't have all the same TR
-echo ${TR_INFO}
+
 
 CONFOUNDEVS=${istartdatadir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_acq-${acq}_desc-confounds_desc-fslConfounds.tsv
 
 
 if [ ! -e $CONFOUNDEVS ]; then
+	echo ${sub} ${acq} "missing confounds"
 	echo "missing confounds: $CONFOUNDEVS " >> ${maindir}/re-runL1.log
 	exit # exiting to ensure nothing gets run without confounds
 fi
+echo ${TR_INFO}
 
 EVDIR=${maindir}/derivatives/fsl/EVFiles/sub-${sub}/${TASK}/acq-${acq} #
+if [ ! -e $EVDIR ]; then
+	echo ${sub} ${acq} "EVDIR missing"
+	echo "missing events files: $EVDIR " >> ${maindir}/re-runL1.log
+	exit # exiting to ensure nothing gets run without confounds
+fi
 
 # empty EVs (specific to this study)
 EV_MISSED_DEC=${EVDIR}/_miss_decision.txt
@@ -47,6 +66,7 @@ if [ -e $EV_MISSED_DEC ]; then
 else
 	SHAPE_MISSED_DEC=10
 fi
+
 
 EV_MISSED_OUTCOME=${EVDIR}/_miss_outcome.txt
 if [ -e $EV_MISSED_OUTCOME ]; then
@@ -118,6 +138,7 @@ if [ "$ppi" == "ecn" -o  "$ppi" == "dmn" ]; then
 
 else # otherwise, do activation and seed-based ppi
 
+
 	# set output based in whether it is activation or ppi
 	if [ "$ppi" == "0" ]; then
 		TYPE=act
@@ -134,7 +155,7 @@ else # otherwise, do activation and seed-based ppi
 		echo "missing feat output: $OUTPUT " >> ${maindir}/re-runL1.log
 		rm -rf ${OUTPUT}.feat
 	fi
-        echo "made it hear"
+       
 	# create template and run analyses
 	ITEMPLATE=${maindir}/templates/L1_task-${TASK}_model-1_type-${TYPE}.fsf
 	OTEMPLATE=${MAINOUTPUT}/L1_sub-${sub}_task-${TASK}_model-1_seed-${ppi}_acq-${acq}_type-act.fsf
