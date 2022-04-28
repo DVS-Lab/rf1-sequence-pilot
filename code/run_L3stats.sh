@@ -14,7 +14,7 @@ for analysis in act; do # act nppi-dmn nppi-ecn ppi_seed %  ppi_seed-NAcc | type
 	analysistype=type-${analysis}
 
 	# these define the cope number (copenum) and cope name (copename)
-	for copeinfo in "1 C_left" "2 C_right" "3 S_left" "4 S_right" "5 C_P" "6 C_N" "7 C_Rew" "8 S_P" "9 S_N" "10 S_Rew" "11 Str>Comp" "12 Left>Right" "13 Rew>Pun" "14 (R|P)>N" "15 Rew>Neu" "16 Neu>Pun"; do
+	for copeinfo in "1 C_left" "2 C_right" "3 S_left" "4 S_right" "5 C_P" "6 C_N" "7 C_Rew" "8 S_P" "9 S_N" "10 S_Rew" "11 StrVsComp" "12 LeftVsRight" "13 RewVsPun" "14 RandPvsN" "15 RewVsNeu" "16 NeuVsPun"; do
 
 		# split copeinfo variable
 		set -- $copeinfo

@@ -16,7 +16,7 @@ istartdatadir=/data/projects/rf1-sequence-pilot #need to fix this upon release (
 
 # study-specific inputs
 TASK=sharedreward
-sm=6
+sm=4
 sub=$1
 mb=$2
 me=$3
