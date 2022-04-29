@@ -70,5 +70,5 @@ results=results[['sub','TotalCount_misses','Beh_TotalExclusion']]
 
 
 exclusions_df.merge(results,on='sub')
-exclusions_df.to_csv('../derivatives/exclusions.csv')
+exclusions_df.to_csv('../derivatives/exclusions.csv', index=False)
 
