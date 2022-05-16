@@ -15,12 +15,12 @@ for type in act; do # ppi_seed-NAcc act nppi-ecn nppi-dmn
           
 		# Manages the number of jobs and cores
   	SCRIPTNAME=${maindir}/code/L2stats.sh
-  	NCORES=10
-  	while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
+  	#NCORES=10
+  	#while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
     		sleep 1s
-  	done
+  	#done
   	bash $SCRIPTNAME $sub $type &
-  	sleep 1s
+  	#sleep 1s
 
 	done
 done

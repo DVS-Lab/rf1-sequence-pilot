@@ -14,7 +14,7 @@ sourcedata=/data/sourcedata/rf1-sequence-pilot
 
 sub=$1
 
-except_subs=(20022 10007 10003 10006 10008 10010 10014 10015 10026 10028 10030)
+except_subs=(20022 10007 10003 10006 10008 10010 10014 10015 10026 10028 10030 10046)
 
 for i in "${except_subs[@]}"
 do

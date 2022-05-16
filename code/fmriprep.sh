@@ -31,5 +31,5 @@ singularity run --cleanenv \
 /base/bids /base/derivatives/fmriprep \
 participant --participant_label $sub \
 --stop-on-first-crash \
---me-output-echos \
+#--me-output-echos \
 --fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch

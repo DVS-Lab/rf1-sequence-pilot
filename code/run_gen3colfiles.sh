@@ -1,6 +1,11 @@
 #!/bin/bash
 
+scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+basedir="$(dirname "$scriptdir")"
 
-for sub in 10007 10010 10026 10014 10003 10030 10024 10017 10035 10043 10041 ; do
+for sub in `ls -d ${basedir}/bids/sub-*/`; do
+
+          sub=${sub#*sub-}
+          sub=${sub%/}
 	bash /data/projects/rf1-sequence-pilot/code/gen3colfiles.sh $sub
 done
