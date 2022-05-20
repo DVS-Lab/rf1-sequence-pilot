@@ -1,26 +1,32 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
 
 #imports libraries
 import json
 import os
 import subprocess
+import re
 
 #gets current working directory If your bids is in the same folder as this file this should work for everyone
-cwd = dir_path = os.path.dirname(os.path.realpath(__file__)) 
-bidsdir = os.path.join('%s/bids'%(cwd))
+cwd = os.getcwd() 
+bidsdir = os.path.join('%s/../../bids'%(cwd))
 
 files = os.listdir(bidsdir)
 subs=[x for x in files if x.startswith('sub')]
-print(subs)
-
+display(subs)
+#makes list of the json files to edit
 
 for subj in subs:
 
-    #makes list of the json files to edit
     files=[os.path.join('%s/%s/fmap'%(bidsdir,subj), f) for f in os.listdir('%s/%s/fmap'%(bidsdir,subj))]
     files_json = [i for i in files if i.endswith('.json')]
     #makes list of the func files to add into the intended for field
     files = ["func/%s"%(file) for file in os.listdir('%s/%s/func'%(bidsdir,subj))]
     files_txt = [i for i in files if i.endswith('.nii.gz')]
+    
     if not all(['run' in str for str in files_json]):
 
         #This could be done better but we open the json files ('r' for read only) as a dictionary add the Intended for key 
@@ -43,7 +49,7 @@ for subj in subs:
         from natsort import natsorted
 
         # USE heudiconv data to find the scans taken after 1 fmap but before the next
-        df=pd.read_csv('/home/strange/Projects/rf1-sequence-pilot/bids/.heudiconv/%s/info/dicominfo.tsv'%(subj[4:]),
+        df=pd.read_csv('/home/strange/Projects/rf1-sequence-pilot/bids/.heudiconv/2002/info/dicominfo.tsv',
                     sep='\t')
         fmaps=df.series_id.str.contains('fmap').values
         breaks=[i for i in range(len(fmaps)) if ((fmaps[i]==False) & (fmaps[i-1]==True))|((fmaps[i]==True) & (fmaps[i-1]==False))]
@@ -90,8 +96,46 @@ for subj in subs:
                 with open(run_jsons[i],'w')as f:
                     json.dump(data,f,indent=4,sort_keys=True)
                     f.close
-    #This could be done better but we open the json files ('r' for read only) as a dictionary add the Intended for key 
-#and add the func files to the key value
-#The f.close is a duplication. f can only be used inside the with "loop"# we open the file again to write only and dump the dictionary to the files
-   
+
+
+# In[69]:
+
+
+
+
+
+# In[66]:
+
+
+
+
+
+# In[51]:
+
+
+breaks
+
+
+# In[65]:
+
+
+
+
+for i in range(len(fmap_runs)):
+
+    
+run_jsons
+    
+
+
+# In[23]:
+
+
+files_txt
+
+
+# In[ ]:
+
+
+if all(['run' in str for str in files_json]):
 

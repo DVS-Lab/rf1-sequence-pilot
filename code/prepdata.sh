@@ -38,7 +38,7 @@ if [ ! -d $dsroot/bids ]; then
 fi
 
 # overwrite existing
-#rm -rf $dsroot/bids/sub-${sub}
+rm -rf $dsroot/bids/sub-${sub}
 
 
 # PART 1: running heudiconv and fixing fieldmaps
@@ -47,7 +47,7 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 
  echo "making bids for sub-${sub}"
 
-	#singularity run --cleanenv \
+	#singularity run --cleanenv \ 
 	#-B $dsroot:/out \
 	#-B $sourcedata:/sourcedata \
 	#/data/tools/heudiconv-0.9.0.simg \
@@ -55,6 +55,8 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 	#-s $sub \
 	#-f /out/code/heuristics.py \
 	#-c dcm2niix -b --minmeta -o /out/bids --overwrite
+	
+	#heudiconv is running through python right now not singularity
 
 	heudiconv -d ${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 	-o ${dsroot}/bids/ \
@@ -75,8 +77,8 @@ python $codedir/addIntendedFor.py
 #
 ## note that you may need to install pydeface via pip or conda
 bidsroot=$dsroot/bids
-#pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
-#mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
+pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
+mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
 #
 ## shift dates on scans to reduce likelihood of re-identification
 python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv

@@ -9,17 +9,22 @@ DLscript=${scriptdir}/downloadXNAT.py
 
 python $DLscript
 
-for sub in $sourcedir;do
-	sub=${sub%_1};
-  	sub=${sub##*-}; 
+for sub_CB in "10024 2" "10017 2" "10035 4" "10043 4" "10041 4" "10059 6" "10054 1" "10069 1" "10080 3" "10074 3" "10085 5" "10094 5" " 10078 2" "10108 2";do
+        set -- $subrun
+	sub=$1
+	CB=$2
+ 
 
 	script=${scriptdir}/prepdata.sh
 	NCORES=8
 	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
 		sleep 1s
 	done
-        echo $script $sub
-	bash $script $sub &
+        echo $script $sub $CB
+	bash $script $sub $CB&
 	sleep 5s
 
 done
+
+bash ${scriptdir}/run_motioneval.sh
+python ${scriptdir}/IDoutliers.py
