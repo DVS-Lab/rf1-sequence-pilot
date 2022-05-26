@@ -23,3 +23,6 @@ for sub in $sourcedir;do
 	sleep 5s
 
 done
+
+python IDoutliers.py --mriscDir "${sourcedir}/derivatives/mriqc"
+
