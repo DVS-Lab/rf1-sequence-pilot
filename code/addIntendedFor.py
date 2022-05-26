@@ -1,4 +1,3 @@
-
 #imports libraries
 import json
 import os
@@ -93,5 +92,5 @@ for subj in subs:
     #This could be done better but we open the json files ('r' for read only) as a dictionary add the Intended for key 
 #and add the func files to the key value
 #The f.close is a duplication. f can only be used inside the with "loop"# we open the file again to write only and dump the dictionary to the files
-   
+
 
