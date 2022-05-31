@@ -8,7 +8,7 @@ task=sharedreward # edit if necessary
 
 for ppi in 0; do # putting 0 first will indicate "activation"
 
-	for sub in `ls -d ${basedir}/derivatives/fmriprep/sub-*/`; do
+	for sub in 10078; do #`ls -d ${basedir}/derivatives/fmriprep/sub-*/`; do
 
           sub=${sub#*sub-}
           sub=${sub%/}  
