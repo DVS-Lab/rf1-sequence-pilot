@@ -69,7 +69,6 @@ fi
 
 # run Jeff's code to fix field map, but first correct permissions
 chmod -R uga+rw $dsroot/bids/sub-$sub
-python $codedir/addIntendedFor.py
 
 
 #
@@ -77,6 +76,7 @@ python $codedir/addIntendedFor.py
 #
 ## note that you may need to install pydeface via pip or conda
 bidsroot=$dsroot/bids
+echo "defacing subject $sub"
 pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
 mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
 #
@@ -89,6 +89,7 @@ python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv
 #
 ## make derivatives folder if it doesn't exist.
 ## let's keep this out of bids for now
+echo "running MRIQC for subject $sub remember to clear your scratch"
 if [ ! -d $dsroot/derivatives/mriqc ]; then
 	mkdir -p $dsroot/derivatives/mriqc
 fi
@@ -118,5 +119,5 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 	/data /out group
 
 fi
-/data /out \
-participant --participant_label $sub -w /scratch
+#/data /out \
+#participant --participant_label $sub -w /scratch
