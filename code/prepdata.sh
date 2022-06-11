@@ -13,6 +13,7 @@
 sourcedata=/data/sourcedata/rf1-sequence-pilot
 
 sub=$1
+cb=$2 # user must provide the intended counterbalance order
 
 except_subs=(20022 10007 10003 10006 10008 10010 10014 10015 10026 10028 10030 10046)
 
@@ -47,7 +48,7 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 
  echo "making bids for sub-${sub}"
 
-	#singularity run --cleanenv \ 
+	#singularity run --cleanenv \
 	#-B $dsroot:/out \
 	#-B $sourcedata:/sourcedata \
 	#/data/tools/heudiconv-0.9.0.simg \
@@ -55,7 +56,7 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 	#-s $sub \
 	#-f /out/code/heuristics.py \
 	#-c dcm2niix -b --minmeta -o /out/bids --overwrite
-	
+
 	#heudiconv is running through python right now not singularity
 
 	heudiconv -d ${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
@@ -109,7 +110,7 @@ export SINGULARITYENV_TEMPLATEFLOW_HOME=/opt/templateflow
 if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
  echo "running mriqc for sub-${sub}"
 
-	
+
 	singularity run --cleanenv \
 	-B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
 	-B $dsroot/bids:/data \
@@ -121,3 +122,9 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 fi
 #/data /out \
 #participant --participant_label $sub -w /scratch
+
+
+# PART 4: convert raw behavioral data into BIDS events format
+cd $codedir
+matlab -nodesktop -r "try; cd('/data/projects/rf1-sequence-pilot/code'); convertSharedReward2BIDSevents($sub,$cb);catch; end; quit"
+# note: the -r option is replaced by -batch in newer versions of matlab. we're on matlab2018a...
