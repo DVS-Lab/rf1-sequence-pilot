@@ -1,0 +1,8 @@
+
+/bin/cp /tmp/feat_4DLOQi.fsf design.fsf
+
+/usr/share/fsl/6.0.3/bin/feat_model design
+
+mkdir .files;cp /usr/share/fsl/6.0.3/doc/fsl.css .files;cp -r /usr/share/fsl/6.0.3/doc/images .files/images
+
+/usr/share/fsl/6.0.3/bin/fsl_sub -T 60 -l logs -N feat2_pre   /usr/share/fsl/6.0.3/bin/feat /data/projects/rf1-sequence-pilot/derivatives/L3_ANOVA.gfeat/design.fsf -D /data/projects/rf1-sequence-pilot/derivatives/L3_ANOVA.gfeat -gfeatprep
