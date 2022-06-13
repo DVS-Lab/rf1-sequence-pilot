@@ -11,9 +11,13 @@ import re
 
 
 # In[2]:
+cwd = dir_path = os.path.dirname(os.path.realpath(__file__)) 
+bidsdir = os.path.join('%s/../bids'%(cwd))
+
+print(bidsdir)
 
 
-event_files=[os.path.join(root,f) for root,dirs,files in os.walk('../bids') for f in files if f.endswith('events.tsv')]
+event_files=[os.path.join(root,f) for root,dirs,files in os.walk(bidsdir) for f in files if f.endswith('events.tsv')]
 data=[]
 for file in event_files:
     sub='sub-'+re.search('func/sub-(.*)_task',file).group(1)
