@@ -5,7 +5,7 @@ import subprocess
 
 #gets current working directory If your bids is in the same folder as this file this should work for everyone
 cwd = dir_path = os.path.dirname(os.path.realpath(__file__)) 
-bidsdir = os.path.join('%s/bids'%(cwd))
+bidsdir = os.path.join('%s/../bids'%(cwd))
 
 files = os.listdir(bidsdir)
 subs=[x for x in files if x.startswith('sub')]
