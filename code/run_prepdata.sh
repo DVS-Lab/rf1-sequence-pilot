@@ -27,5 +27,6 @@ for sub_CB in "10024 2" "10017 2" "10035 4" "10043 4" "10041 4" "10059 6" "10054
 done
 
 bash ${scriptdir}/run_motioneval.sh
-python IDoutliers.py --mriscDir "${sourcedir}/derivatives/mriqc"
+python ${scriptdir}/IDoutliers.py --mriscDir "${sourcedir}/derivatives/mriqc"
+bash ${scriptdir}/run_gen3colfiles.sh
 
