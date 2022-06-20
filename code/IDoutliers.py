@@ -45,8 +45,8 @@ for sub in events_df['sub'].unique():
     print(sub)
     for acq in events_df['acq'].unique():
         
-        absolute=np.loadtxt('../derivatives/fsl/mcflirt/%s/%s/_abs.rms'%(sub,acq))
-        FD=np.loadtxt('../derivatives/fsl/mcflirt/%s/%s/_rel.rms'%(sub,acq))
+        absolute=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_abs.rms'%(cwd,sub,acq))
+        FD=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_rel.rms'%(cwd,sub,acq))
         
         row=[sub,acq,
              np.divide(
