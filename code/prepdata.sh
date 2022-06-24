@@ -39,7 +39,7 @@ if [ ! -d $dsroot/bids ]; then
 fi
 
 # overwrite existing
-rm -rf $dsroot/bids/sub-${sub}
+#rm -rf $dsroot/bids/sub-${sub}
 
 
 # PART 1: running heudiconv and fixing fieldmaps
@@ -78,11 +78,11 @@ chmod -R uga+rw $dsroot/bids/sub-$sub
 ## note that you may need to install pydeface via pip or conda
 bidsroot=$dsroot/bids
 echo "defacing subject $sub"
-pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
-mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
+#pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
+#mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
 #
 ## shift dates on scans to reduce likelihood of re-identification
-python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv
+#python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv
 #
 #
 #
@@ -117,7 +117,8 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 	-B $dsroot/derivatives/mriqc:/out \
 	-B $scratch:/scratch \
 	/data/tools/mriqc-0.16.1.simg \
-	/data /out group
+	/data /out \
+        participant --participant_label $sub -w /scratch
 
 fi
 #/data /out \
@@ -126,5 +127,5 @@ fi
 
 # PART 4: convert raw behavioral data into BIDS events format
 cd $codedir
-matlab -nodesktop -r "try; cd('/data/projects/rf1-sequence-pilot/code'); convertSharedReward2BIDSevents($sub,$cb);catch; end; quit"
+#matlab -nodesktop -r "try; cd('/data/projects/rf1-sequence-pilot/code'); convertSharedReward2BIDSevents($sub,$cb);catch; end; quit"
 # note: the -r option is replaced by -batch in newer versions of matlab. we're on matlab2018a...
