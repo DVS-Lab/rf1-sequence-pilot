@@ -49,9 +49,7 @@ for sub in events_df['sub'].unique():
         FD=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_rel.rms'%(cwd,sub,acq))
         
         row=[sub,acq,
-             np.divide(
-                 events_df[(events_df['sub']==sub)&(events_df['acq']==acq)]['trial_type'].str.count('miss').sum()
-                 ,2),
+            events_df[(events_df['sub']==sub)&(events_df['acq']==acq)]['trial_type'].str.count('miss_decision').sum(),
             absolute.max(),FD.mean()]
         data.append(row)
         
