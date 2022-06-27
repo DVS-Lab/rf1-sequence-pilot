@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import os
 import re
+import json
 
 
 # In[2]:
@@ -46,11 +47,18 @@ for sub in events_df['sub'].unique():
     for acq in events_df['acq'].unique():
         
         absolute=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_abs.rms'%(cwd,sub,acq))
-        FD=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_rel.rms'%(cwd,sub,acq))
+        f = open("../derivatives/mriqc/sub-10017/func/sub-10017_task-sharedreward_acq-mb1me1_bold.json")
+  
+        # returns JSON object as 
+        # a dictionary
+        FD = json.load(f)
+        f.close
+        FD=FD['fd_mean']
+        #FD=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_rel.rms'%(cwd,sub,acq))
         
         row=[sub,acq,
             events_df[(events_df['sub']==sub)&(events_df['acq']==acq)]['trial_type'].str.count('miss_decision').sum(),
-            absolute.max(),FD.mean()]
+            absolute.max(),FD]
         data.append(row)
         
 exclusions_df=pd.DataFrame(data=data,columns=['sub','acq','TrialCount_misses','Max_Abs_motion','FD_mean'])
