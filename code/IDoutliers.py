@@ -47,7 +47,11 @@ for sub in events_df['sub'].unique():
     for acq in events_df['acq'].unique():
         
         absolute=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_abs.rms'%(cwd,sub,acq))
-        f = open("../derivatives/mriqc/sub-10017/func/sub-10017_task-sharedreward_acq-mb1me1_bold.json")
+        
+        if acq in ['mb1me4','mb3me4','mb6me4']:
+            f = open("%s/../derivatives/mriqc/%s/func/%s_task-sharedreward_acq-%s_echo-1_bold.json"%(cwd,sub,sub,acq))
+        else:
+            f = open("%s/../derivatives/mriqc/%s/func/%s_task-sharedreward_acq-%s_bold.json"%(cwd,sub,sub,acq))
   
         # returns JSON object as 
         # a dictionary
