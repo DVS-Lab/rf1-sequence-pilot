@@ -154,3 +154,5 @@ sub-*.html
 
 # tmp files
 .~*#
+*.out
+*.log
