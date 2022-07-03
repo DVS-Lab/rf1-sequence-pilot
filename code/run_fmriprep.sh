@@ -10,7 +10,7 @@ for sub in $bidsdir/sub*; do
 	sub="${sub##*/}"
 
 	script=${scriptdir}/fmriprep.sh
-	NCORES=8
+	NCORES=3
 	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
 		sleep 1s
 	done

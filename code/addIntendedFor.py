@@ -2,6 +2,7 @@
 import json
 import os
 import subprocess
+import re
 
 #gets current working directory If your bids is in the same folder as this file this should work for everyone
 cwd = dir_path = os.path.dirname(os.path.realpath(__file__)) 
@@ -13,6 +14,7 @@ print(subs)
 
 
 for subj in subs:
+    print("Running subject: %s"%(subj))
 
     #makes list of the json files to edit
     files=[os.path.join('%s/%s/fmap'%(bidsdir,subj), f) for f in os.listdir('%s/%s/fmap'%(bidsdir,subj))]
@@ -42,7 +44,7 @@ for subj in subs:
         from natsort import natsorted
 
         # USE heudiconv data to find the scans taken after 1 fmap but before the next
-        df=pd.read_csv('/home/strange/Projects/rf1-sequence-pilot/bids/.heudiconv/%s/info/dicominfo.tsv'%(subj[4:]),
+        df=pd.read_csv('%s/../bids/.heudiconv/%s/info/dicominfo.tsv'%(cwd,subj[4:]),
                     sep='\t')
         fmaps=df.series_id.str.contains('fmap').values
         breaks=[i for i in range(len(fmaps)) if ((fmaps[i]==False) & (fmaps[i-1]==True))|((fmaps[i]==True) & (fmaps[i-1]==False))]
@@ -63,14 +65,16 @@ for subj in subs:
         #count the unique run values for the json files
         fmap_runs=natsorted(set(
             [re.search("run-(.*)_",item).group(0) for item in files_json]))
-        
+        print(fmap_runs)
         # Read the acquisition from the series ID
         for i,group in enumerate(groups):
             acqs=[]
             for item in group:
-                ME=re.search('ME(.*)_TR',item).group(1)
-                MB=re.search('MB(.*)_IP2',item).group(1)
-                acqs.append('mb%sme%s'%(MB,ME))
+                if "CMRR" in item:
+                    #print("item is %s"%(item))
+                    ME=re.search('ME(.*)_TR',item).group(1)
+                    MB=re.search('MB(.*)_IP',item).group(1)
+                    acqs.append('mb%sme%s'%(MB,ME))
                 
             #Find files with that contain the acquistions listed
             file_groups=list(cheap_df[cheap_df[0].str.contains('|'.join(acqs))][0].values)
