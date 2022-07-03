@@ -151,3 +151,6 @@ derivatives/fmriprep/*/func/*_bold.json
 derivatives/fmriprep_1/*
 sub-*.html
 *.asv
+
+# tmp files
+.~*#
