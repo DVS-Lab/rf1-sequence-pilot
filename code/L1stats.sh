@@ -25,7 +25,7 @@ acq=mb${mb}me${me}
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
 mkdir -p $MAINOUTPUT
 
-DATA=${maindir}/derivatives/fmriprep_1/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
+DATA=${maindir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq-${acq}_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz
 
 #Handling different inputs for multi vs single echos
 #if [ $me -gt 1 ];then
