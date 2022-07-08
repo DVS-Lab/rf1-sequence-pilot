@@ -18,4 +18,4 @@ for sub in $bidsdir/sub*; do
 	bash $script $sub &
 	sleep 5s
 done
-python ${scriptdir}/MakeConfounds.py --fmriprepDir "${scriptdir}/../derivatives/fmriprep
+#python ${scriptdir}/MakeConfounds.py --fmriprepDir "${scriptdir}/../derivatives/fmriprep
