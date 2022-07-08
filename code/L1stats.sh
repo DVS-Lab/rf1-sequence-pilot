@@ -40,14 +40,11 @@ NVOLUMES=`fslnvols $DATA`
 TRINFO=`fslval $DATA pixdim4` #OUR DATA won't have all the same TR
 
 CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_acq-${acq}_desc-confounds_desc-fslConfounds.tsv
-
-
 if [ ! -e $CONFOUNDEVS ]; then
 	echo ${sub} ${acq} "missing confounds"
 	echo "missing confounds: $CONFOUNDEVS " >> ${maindir}/re-runL1.log
 	exit # exiting to ensure nothing gets run without confounds
 fi
-echo ${TR_INFO}
 
 EVDIR=${maindir}/derivatives/fsl/EVFiles/sub-${sub}/${TASK}/acq-${acq} #
 if [ ! -e $EVDIR ]; then
@@ -96,12 +93,11 @@ if [ "$ppi" == "0" ]; then
   sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@DATA@'$DATA'@g' \
 	-e 's@EVDIR@'$EVDIR'@g' \
-	-e 's@SMOOTH@'$sm'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
 	-e 's@NVOLUMES@'$NVOLUMES'@g' \
-  -e 's@TRINFO@'"${TRINFO}"'@g' \
-  -e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
-  -e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
+	-e 's@TRINFO@'$TRINFO'@g' \
+	-e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
+	-e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 	<$ITEMPLATE> $OTEMPLATE
 else
 	PHYS=${MAINOUTPUT}/ts_task-${TASK}_mask-${ppi}_acq-${acq}.txt
@@ -110,13 +106,12 @@ else
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@DATA@'$DATA'@g' \
 	-e 's@EVDIR@'$EVDIR'@g' \
-  -e 's@SHAPE_MISSED_DEC@'"$SHAPE_MISSED_DEC"'@g' \
-  -e 's@SHAPE_MISSED_OUTCOME@'"$SHAPE_MISSED_OUTCOME"'@g' \
+	-e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
+	-e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 	-e 's@PHYS@'$PHYS'@g' \
-	-e 's@SMOOTH@'$sm'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
 	-e 's@NVOLUMES@'$NVOLUMES'@g' \
-  -e 's@TRINFO@'${TR_INFO}'@g' \
+	-e 's@TRINFO@'$TRINFO'@g' \
 	<$ITEMPLATE> $OTEMPLATE
 fi
 feat $OTEMPLATE
