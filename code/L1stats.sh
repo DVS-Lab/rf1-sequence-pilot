@@ -39,6 +39,8 @@ DATA=${maindir}/derivatives/fmriprep/sub-${sub}/func/sub-${sub}_task-${TASK}_acq
 NVOLUMES=`fslnvols $DATA`
 TRINFO=`fslval $DATA pixdim4` #OUR DATA won't have all the same TR
 
+
+
 CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_acq-${acq}_desc-confounds_desc-fslConfounds.tsv
 if [ ! -e $CONFOUNDEVS ]; then
 	echo ${sub} ${acq} "missing confounds"
@@ -88,14 +90,13 @@ fi
 # create template and run analyses
 ITEMPLATE=${maindir}/templates/L1_task-${TASK}_model-1_type-${TYPE}.fsf
 OTEMPLATE=${MAINOUTPUT}/L1_sub-${sub}_task-${TASK}_model-1_seed-${ppi}_acq-${acq}_type-${TYPE}.fsf
-echo $OUTPUT
 if [ "$ppi" == "0" ]; then
   sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@DATA@'$DATA'@g' \
 	-e 's@EVDIR@'$EVDIR'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
 	-e 's@NVOLUMES@'$NVOLUMES'@g' \
-	-e 's@TRINFO@'$TRINFO'@g' \
+	-e 's@TRINFO@'"$TRINFO"'@g' \
 	-e 's@SHAPE_MISSED_DEC@'$SHAPE_MISSED_DEC'@g' \
 	-e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 	<$ITEMPLATE> $OTEMPLATE
@@ -110,8 +111,8 @@ else
 	-e 's@SHAPE_MISSED_OUTCOME@'$SHAPE_MISSED_OUTCOME'@g' \
 	-e 's@PHYS@'$PHYS'@g' \
 	-e 's@CONFOUNDEVS@'$CONFOUNDEVS'@g' \
+	-e 's@TRINFO@'"$TRINFO"'@g' \
 	-e 's@NVOLUMES@'$NVOLUMES'@g' \
-	-e 's@TRINFO@'$TRINFO'@g' \
 	<$ITEMPLATE> $OTEMPLATE
 fi
 feat $OTEMPLATE
