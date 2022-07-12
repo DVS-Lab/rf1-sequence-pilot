@@ -20,6 +20,9 @@ mb=$2
 me=$3
 ppi=$4 # 0 for activation, otherwise seed region (only VS here)
 acq=mb${mb}me${me}
+denoise=$5
+
+echo "Inputs Task: ${Task} sub: ${sub} ppi: ${ppi} acq: ${acq} denoise: ${denoise}"
 
 # set inputs and general outputs (should not need to chage across studies in Smith Lab)
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
@@ -40,8 +43,16 @@ NVOLUMES=`fslnvols $DATA`
 TRINFO=`fslval $DATA pixdim4` #OUR DATA won't have all the same TR
 
 
+if [ "$denoise" == "none" ];then
+    CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_acq-${acq}_desc-confounds_desc-fslConfounds.tsv
+fi
 
-CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_acq-${acq}_desc-confounds_desc-fslConfounds.tsv
+if [ "$denoise" == "tedana" ];then
+    CONFOUNDEVS=${maindir}/derivatives/fsl/confounds/sub-${sub}/sub-${sub}_task-${TASK}_acq-${acq}_desc-TedanaPlusConfounds.tsv
+fi
+
+echo "Counfound file is ${CONFOUNDEVS}"
+
 if [ ! -e $CONFOUNDEVS ]; then
 	echo ${sub} ${acq} "missing confounds"
 	echo "missing confounds: $CONFOUNDEVS " >> ${maindir}/re-runL1.log
@@ -73,10 +84,10 @@ fi
 # set output based in whether it is activation or ppi
 if [ "$ppi" == "0" ]; then
 	TYPE=act
-	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-1_type-${TYPE}_acq-${acq}_sm-${sm}
+	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-1_type-${TYPE}_acq-${acq}_sm-${sm}_denoise-${denoise}
 else
 	TYPE=ppi
-	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-1_type-${TYPE}_seed-${ppi}_acq-${acq}_sm-${sm}
+	OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-1_type-${TYPE}_seed-${ppi}_acq-${acq}_sm-${sm}_denoise-${denoise}
 fi
 
 # check for output and skip existing
@@ -89,7 +100,7 @@ fi
 
 # create template and run analyses
 ITEMPLATE=${maindir}/templates/L1_task-${TASK}_model-1_type-${TYPE}.fsf
-OTEMPLATE=${MAINOUTPUT}/L1_sub-${sub}_task-${TASK}_model-1_seed-${ppi}_acq-${acq}_type-${TYPE}.fsf
+OTEMPLATE=${MAINOUTPUT}/L1_sub-${sub}_task-${TASK}_model-1_seed-${ppi}_acq-${acq}_type-${TYPE}_denoise-${denoise}.fsf
 if [ "$ppi" == "0" ]; then
   sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@DATA@'$DATA'@g' \
