@@ -10,11 +10,11 @@ maindir="$(dirname "$scriptdir")"
 
 
 # this loop defines the different types of analyses that will go into the group comparisons
-for analysis in act; do # act nppi-dmn nppi-ecn ppi_seed %  ppi_seed-NAcc | type-${type}_run-01
+for analysis in ppi_seed-VS; do # act nppi-dmn nppi-ecn ppi_seed %  ppi_seed-NAcc | type-${type}_run-01
 	analysistype=type-${analysis}
 
 	# these define the cope number (copenum) and cope name (copename)
-	for copeinfo in "1 C_left" "2 C_right" "3 S_left" "4 S_right" "5 C_P" "6 C_N" "7 C_Rew" "8 S_P" "9 S_N" "10 S_Rew" "11 StrVsComp" "12 LeftVsRight" "13 RewVsPun" "14 RandPvsN" "15 RewVsNeu" "16 NeuVsPun"; do
+	for copeinfo in "17 VSact";do # "1 C_left" "2 C_right" "3 S_left" "4 S_right" "5 C_P" "6 C_N" "7 C_Rew" "8 S_P" "9 S_N" "10 S_Rew" "11 StrVsComp" "12 LeftVsRight" "13 RewVsPun" "14 RandPvsN" "15 RewVsNeu" "16 NeuVsPun" "17 VSact"; do
 
 		# split copeinfo variable
 		set -- $copeinfo

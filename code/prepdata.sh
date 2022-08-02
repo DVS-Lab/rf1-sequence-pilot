@@ -69,7 +69,7 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 fi
 
 # run Jeff's code to fix field map, but first correct permissions
-chmod -R uga+rw $dsroot/bids/sub-$sub
+chmod -R 777 $dsroot/bids/sub-$sub
 
 
 #
