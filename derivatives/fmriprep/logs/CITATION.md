@@ -124,7 +124,7 @@ The estimated *fieldmap* was then aligned with rigid-registration to the target
 EPI (echo-planar imaging) reference run.
 The field coefficients were mapped on to the reference EPI using the transform.
 BOLD runs were slice-time corrected to 2.3s (0.5 of slice acquisition range
-0s-4.6s) using `3dTshift` from AFNI  [@afni, RRID:SCR_005927].
+0s-4.59s) using `3dTshift` from AFNI  [@afni, RRID:SCR_005927].
 A T2<sup>★</sup> map was estimated from the preprocessed EPI echoes, by voxel-wise fitting
 the maximal number of echoes with reliable signal in that voxel to a monoexponential signal
 decay model with nonlinear regression.
@@ -285,7 +285,7 @@ parameters) are estimated before any spatiotemporal filtering using
 The estimated *fieldmap* was then aligned with rigid-registration to the target
 EPI (echo-planar imaging) reference run.
 The field coefficients were mapped on to the reference EPI using the transform.
-BOLD runs were slice-time corrected to 0.75s (0.5 of slice acquisition range
+BOLD runs were slice-time corrected to 0.751s (0.5 of slice acquisition range
 0s-1.5s) using `3dTshift` from AFNI  [@afni, RRID:SCR_005927].
 A T2<sup>★</sup> map was estimated from the preprocessed EPI echoes, by voxel-wise fitting
 the maximal number of echoes with reliable signal in that voxel to a monoexponential signal
