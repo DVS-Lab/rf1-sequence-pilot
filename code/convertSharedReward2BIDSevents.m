@@ -63,8 +63,8 @@ try
         if exist(fname,'file')
             T = readtable(fname,'TreatAsEmpty','--');
         else
-            fprintf('sub-%d_task-sharedreward_run-%d: No data found.\n', subj, r)
-            keyboard
+            fprintf('sub-%d_task-sharedreward_run-%d: No data found. Exiting...\n', subj, r)
+            exit
         end
         
         % strip out irrelevant information and missed trials
