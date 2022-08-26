@@ -33,9 +33,8 @@ try
     
     % set up paths
     scriptname = matlab.desktop.editor.getActiveFilename;
-        fprintf("running subject: %d counterbalance: %d", subj, counterbalance)
-    %qui[codedir,~,~] = fileparts(scriptname);
-    codedir="/data/projects/rf1-sequence-pilot/code";
+    fprintf("running subject: %d counterbalance: %d", subj, counterbalance)
+    [codedir,~,~] = fileparts(scriptname);
     cd(codedir);
     addpath(codedir);
     cd ..
