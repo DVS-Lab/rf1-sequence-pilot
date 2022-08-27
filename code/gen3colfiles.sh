@@ -30,6 +30,6 @@ for acq in mb1me1 mb1me4 mb3me1 mb3me4 mb6me1 mb6me4; do
     bash ${scriptdir}/BIDSto3col.sh $input ${output}/
   else
     echo "PATH ERROR: cannot locate ${input}."
-    exit
+    continue
   fi
 done
