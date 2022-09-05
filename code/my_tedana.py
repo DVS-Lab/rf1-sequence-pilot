@@ -64,7 +64,7 @@ for acq in image_prefix_list:
         os.path.abspath(
             os.path.dirname( prep_data )), "tedana/%s"%(sub))
 
-    print(prep_data,out_dir)
+    #print(prep_data,out_dir)
 
     data.append([sub,acq,acq_image_files,echo_times,out_dir])
 
@@ -86,24 +86,27 @@ args=zip(InData_df['sub'].tolist(),
 
 
 def RUN_Tedana(sub,prefix,EchoFiles,EchoTimes,OutDir):
+
     
     time.sleep(2)
-    print(sub+'\n')
+    #print(sub,acq+'\n')
     
-    if os.path.isdir(OutDir):
+    if os.path.exists("%s/%s_desc-optcomDenoised_bold.nii.gz "%(OutDir,acq)):
         print('Tedana was previously run for Sub %s remove directory if they need to be reanalyzed'%(sub))
     else:
-        os.makedirs(OutDir)
-
-    workflows.tedana_workflow(
-    EchoFiles,
-    EchoTimes,
-    out_dir=OutDir,
-    prefix="%s"%(prefix),
-    fittype="curvefit",
-    tedpca="kic",
-    verbose=True,
-    gscontrol=None)
+  
+        os.makedirs(OutDir,exist_ok=True)
+        print("Running TEDANA for %s"%(acq)+'\n)
+        
+        workflows.tedana_workflow(
+	    EchoFiles,
+	    EchoTimes,
+	    out_dir=OutDir,
+	    prefix="%s"%(prefix),
+	    fittype="curvefit",
+	    tedpca="kic",
+	    verbose=True,
+	    gscontrol=None)
     
 from multiprocessing import Pool
 

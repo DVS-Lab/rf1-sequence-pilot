@@ -33,9 +33,8 @@ try
     
     % set up paths
     scriptname = matlab.desktop.editor.getActiveFilename;
-        fprintf("running subject: %d counterbalance: %d", subj, counterbalance)
-    %qui[codedir,~,~] = fileparts(scriptname);
-    codedir="/data/projects/rf1-sequence-pilot/code";
+    fprintf("running subject: %d counterbalance: %d", subj, counterbalance)
+    [codedir,~,~] = fileparts(scriptname);
     cd(codedir);
     addpath(codedir);
     cd ..
@@ -64,8 +63,8 @@ try
         if exist(fname,'file')
             T = readtable(fname,'TreatAsEmpty','--');
         else
-            fprintf('sub-%d_task-sharedreward_run-%d: No data found.\n', subj, r)
-            keyboard
+            fprintf('sub-%d_task-sharedreward_run-%d: No data found. Exiting...\n', subj, r)
+            exit
         end
         
         % strip out irrelevant information and missed trials

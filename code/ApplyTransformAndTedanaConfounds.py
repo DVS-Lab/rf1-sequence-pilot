@@ -27,11 +27,12 @@ def auto_antstransform(img):
     sub='sub-'+re.search('/sub-(.*)/sub',img).group(1)
     task=re.search('task-(.*)_acq',img).group(1)
     acq=re.search('acq-(.*)_desc',img).group(1)
-    print('Applying Transforms: \n',sub,'task: '+task,'acquisition: '+acq)
+    
 
     output='%s/%s/func/%s_task-%s_acq-%s_desc-optcom-dewarped_bold.nii.gz'%(fmriprep_dir,sub,sub,task,acq)
 
     if not os.path.isfile(output):
+        print('Applying Transforms: \n',sub,'task: '+task,'acquisition: '+acq)
         fixed = ants.image_read(
             '../masks/bg_image.nii') 
         moving = ants.image_read( 
