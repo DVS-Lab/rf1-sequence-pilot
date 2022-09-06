@@ -64,7 +64,7 @@ try
             T = readtable(fname,'TreatAsEmpty','--');
         else
             fprintf('sub-%d_task-sharedreward_run-%d: No data found. Exiting...\n', subj, r)
-            exit
+            %exit
         end
         
         % strip out irrelevant information and missed trials

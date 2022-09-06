@@ -118,7 +118,7 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 	-B $scratch:/scratch \
 	/data/tools/mriqc-0.16.1.simg \
 	/data /out \
-        participant --participant_label $sub -w /scratch
+       participant --participant_label $sub -w /scratch
 
 fi
 #/data /out \
