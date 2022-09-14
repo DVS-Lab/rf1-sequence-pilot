@@ -27,6 +27,10 @@ for sub_CB in "10203 1" "10234 5" "10166 4" "10223 1" "10198 3" "12042 2" "10303
 
 done
 
+NCORES=1
+	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
+		sleep 1s
+	done
 bash ${scriptdir}/run_motioneval.sh
 python ${scriptdir}/IDoutliers.py --mriscDir "${sourcedir}/derivatives/mriqc"
 bash ${scriptdir}/run_gen3colfiles.sh
