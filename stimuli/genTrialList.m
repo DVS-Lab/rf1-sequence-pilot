@@ -27,7 +27,7 @@ evt6	stranger_win        11
 maindir = pwd;
 outfiles = fullfile(maindir,'event-related','params');
 mkdir(outfiles);
-subs = 10300:10400;
+subs = 10401:10500;
 
 for s = subs
 
