@@ -44,7 +44,7 @@ fi
 
 # PART 1: running heudiconv and fixing fieldmaps
 #/data/sourcedata/rf1-sequence-pilot/MB_ME_test_sub-0001/dicoms/9-CMRR_MB3_IP2_ME1_TR1850/resources/DICOM/files
-if [ ! -d $dsroot/bids/sub-${sub} ]; then
+#if [ ! -d $dsroot/bids/sub-${sub} ]; then
 
  echo "making bids for sub-${sub}"
 
@@ -66,7 +66,7 @@ if [ ! -d $dsroot/bids/sub-${sub} ]; then
 	-c dcm2niix \
 	-b --minmeta --overwrite
 
-fi
+#fi
 
 # run Jeff's code to fix field map, but first correct permissions
 chmod -R 777 $dsroot/bids/sub-$sub
@@ -127,5 +127,5 @@ fi
 
 # PART 4: convert raw behavioral data into BIDS events format
 cd $codedir
-matlab -nodesktop -batch "try; cd('/data/projects/rf1-sequence-pilot/code'); convertSharedReward2BIDSevents($sub,$cb);catch; end; quit"
+#matlab -nodesktop -batch "try; cd('/data/projects/rf1-sequence-pilot/code'); convertSharedReward2BIDSevents($sub,$cb);catch; end; quit"
 # note: the -r option is replaced by -batch in newer versions of matlab. we're on matlab2018a...

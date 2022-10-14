@@ -8,7 +8,7 @@ task=sharedreward # edit if necessary
 
 python ${scriptdir}/MakeConfounds.py --fmriprepDir "${scriptdir}/../derivatives/fmriprep"
 for ppi in 0 VS; do # putting 0 first will indicate "activation"
-	for sub in 10203 10234 10166 10223 10198 12042 10303; do # 20-channel headcoil participants
+	for sub in 10318 10319 10198 10234 10303 10321; do # 20-channel headcoil participants
 	#10017 10024 10035 10043 10054 10059 10074 10078 10080 10108 10125 10136 10137 10142 10150 10154 10186 10188 10221; do
 		for mb in 1 3 6; do
 			for me in 1 4; do

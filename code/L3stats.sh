@@ -106,7 +106,7 @@ echo "copenum: ${copenum} Replacement ${REPLACEME} OUTPUT ${MAINOUTPUT}"
 ### --- One group ------------------------------
 # set outputs and check for existing
 cnum_pad=`zeropad ${copenum} 2`
-OUTPUT=${MAINOUTPUT}/L3_task-${task}_${REPLACEME}_cnum-${cnum_pad}_cname-${copename}_onegroup
+OUTPUT=${MAINOUTPUT}/L3_task-${task}_voxelCorr_${REPLACEME}_cnum-${cnum_pad}_cname-${copename}_onegroup
 if [ -e ${OUTPUT}.gfeat/cope1.feat/cluster_mask_zstat1.nii.gz ]; then
 
 	# run randomise if output doesn't exist and the contrasts (copes) are valid
@@ -121,7 +121,7 @@ else # try to run feat and clean up previous effort with partial output
 	rm -rf ${OUTPUT}.gfeat
 
 	# create template and run FEAT analyses
-	ITEMPLATE=${maindir}/templates/L3_template_n${N}.fsf
+	ITEMPLATE=${maindir}/templates/L3_template_n${N}_voxelCorr.fsf
 	OTEMPLATE=${MAINOUTPUT}/L3_task-${task}_${REPLACEME}_copenum-${copenum}.fsf
 	sed -e 's@OUTPUT@'$OUTPUT'@g' \
 	-e 's@COPENUM@'$copenum'@g' \
