@@ -11,7 +11,7 @@ import os
 
 #parameters
 useFullScreen = True
-useDualScreen=1
+useDualScreen=2
 DEBUG = False
 
 frame_rate=1
