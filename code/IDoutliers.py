@@ -43,7 +43,7 @@ print(events_df['sub'].unique())
 data=[]
 for sub in events_df['sub'].unique():
     print(sub)
-    for acq in events_df['acq'].unique():
+    for acq in events_df[events_df['sub']==sub]['acq'].unique():
         
         absolute=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_abs.rms'%(cwd,sub,acq))
         FD=np.loadtxt('%s/../derivatives/fsl/mcflirt/%s/%s/_rel.rms'%(cwd,sub,acq))
