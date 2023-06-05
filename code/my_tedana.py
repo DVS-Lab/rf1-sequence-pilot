@@ -102,7 +102,7 @@ def RUN_Tedana(sub,prefix,EchoFiles,EchoTimes,OutDir):
     prefix="%s"%(prefix),
     fittype="curvefit",
     tedpca="kic",
-    verbose=True,
+    verbose=False,
     gscontrol=None)
     
 from multiprocessing import Pool
