@@ -29,8 +29,8 @@ subjDlg.addField('Enter Subject ID: ')
 #subjDlg.addField('Enter Friend Name: ') #1
 #subjDlg.addField('Enter Partner Name: ')#NOTE: PARTNER IS THE CONFEDERATE/STRANGER #2
 subjDlg.addField('Run:', choices=['1', '2', '3', '4', '5', '6'])
-subjDlg.addField('MB:', choices=['1', '3', '6'])
-subjDlg.addField('ME:', choices=['1', '4'])
+subjDlg.addField('MB:', choices=['2', '3'])
+subjDlg.addField('ME:', choices=['1', '3', '4-orig', '4', '3-noGRAPPA'])
 subjDlg.show()
 
 if gui.OK:
