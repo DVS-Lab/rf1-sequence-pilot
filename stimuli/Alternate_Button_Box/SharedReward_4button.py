@@ -77,7 +77,7 @@ outcome_text = visual.TextStim(win=win, name='text',text='',font='Arial',pos=(0,
 outcome_money = visual.TextStim(win=win, name='text',text='',font='Wingdings 3',pos=(0, 2.0), height=2, wrapWidth=None, ori=0, colorSpace='rgb', opacity=1,depth=-1.0);
 
 #instructions
-instruct_screen = visual.TextStim(win, text='Welcome to the Card Guessing Game!\n\nIn this game you will have to guess the numerical value of a card for a chance to win some money.\n\nIf you think the value of the card will be lower than 5, press with your left index finger.\n\nIf you think the value of the card will be higher than 5, press with your right index finger.', pos = (0,1), wrapWidth=20, height = 1.2)
+instruct_screen = visual.TextStim(win, text='Welcome to the Card Guessing Game!\n\nIn this game you will have to guess the numerical value of a card for a chance to win some money.\n\nIf you think the value of the card will be lower than 5, press with your right index (pointer) finger.\n\nIf you think the value of the card will be higher than 5, press with your right middle finger.', pos = (0,1), wrapWidth=20, height = 1.2)
 instruct_screen2 = visual.TextStim(win, text='Remember, you will be sharing monetary outcomes on each trial with the partner displayed at the top of the screen––either the computer or a previous participant.\n\nIf you guess correctly, you and your partner earn $10 ($5 each).\n If you guess incorrectly, you and your partner lose $5 ($2.50 each).', pos = (0,1), wrapWidth=20, height = 1.2)
 
 #exit
@@ -141,11 +141,11 @@ for run in range(1):
 # Instructions
 instruct_screen.draw()
 win.flip()
-event.waitKeys(keyList=('2'))
+event.waitKeys(keyList=('1'))
 
 instruct_screen2.draw()
 win.flip()
-event.waitKeys(keyList=('2'))
+event.waitKeys(keyList=('1'))
 
 # main task loop
 def do_run(run, trials):
