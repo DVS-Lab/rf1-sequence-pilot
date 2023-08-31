@@ -31,6 +31,7 @@ subjDlg.addField('Enter Subject ID: ')
 subjDlg.addField('Run:', choices=['1', '2', '3', '4', '5', '6'])
 subjDlg.addField('MB:', choices=['1', '3', '6'])
 subjDlg.addField('ME:', choices=['1', '4'])
+subjDlg.addField('IP:', choices=['0', '2'])
 subjDlg.show()
 
 if gui.OK:
